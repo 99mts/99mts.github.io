@@ -59,7 +59,7 @@
       </li>
       <li>
         
-    更新 <time datetime="2024-12-10T11:05:57.687Z" itemprop="dateUpdated">2024-12-10</time>
+    更新 <time datetime="2024-12-10T11:15:34.625Z" itemprop="dateUpdated">2024-12-10</time>
 
       </li>
       <li id="busuanzi_container_page_pv">
@@ -76,12 +76,19 @@
 <p><em>视频版教程</em>：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Ju4m1c7WR/">bilibili视频链接</a></p>
 <p><strong>1.首先就是要少用steam++（ <em>Watt Toolkit</em> ）</strong></p>
 <p>​        虽然用steam++有时能很快进入GitHub，但是使用steam++进行加速时，sream++会更改host文件（好像是这样吧），然后引发一些隐性问题，比如导致在使用hexo执行命令时报错。如果遇到GitHub因为网络问题打不开，可以在网址前面加上kk（就像这样kkgithub）使用镜像网站，可以解决大概90%的网络问题。</p>
-<p><em><em>2</em>.not found git</em>**</p>
+<p><strong>2.not found git</strong></p>
 <p>​       忘了是在哪一步（好像是用hexo g生成的时候），在输入命令之后没反应，返回了一个  not found git  。但是我记得我下了Git，然后就卡住了。最后发现是之前有一个命令输入错了，只需要回到博客文件夹打开git bash输入这个代码npm install hexo-deployer-git –save（安装自动部署发布工具）就可以了。</p>
 <p><strong>3.hexo d部署博客问题</strong>                 <em>（特别鸣谢 yxl）</em></p>
 <p>​        在使用hexo d部署博客时大概率会遇到这个问题，就是使用hexo d命令时出现这些报错</p>
 <p>Error: Spawn failed<br>at ChildProcess.<anonymous>  (D:\StudyMaterials\8_FileManagement\testBlog\blog\node_modules\hexo-util\lib\spawn.js:51:21)<br>atChildProcess.emit(events.js:314:20)atChildProcess.cp.emit(D:\StudyMaterials\8_FileManagement\testBlog\blog\node_modules\crossspawn\lib\enoent.js:34:29)atProcess.ChildProcess._handle.onexit (internal&#x2F;child_process.js:275:12)</p>
-<p>​        此时可以打开config.yml配置文件,修改repo: <a target="_blank" rel="noopener" href="https://github.com/yourname/yourname.github.io.git%E4%B8%BArepo">https://github.com/yourname/yourname.github.io.git为repo</a>: <a href="mailto:&#103;&#105;&#116;&#x40;&#103;&#105;&#x74;&#104;&#x75;&#98;&#x2e;&#99;&#111;&#109;">&#103;&#105;&#116;&#x40;&#103;&#105;&#x74;&#104;&#x75;&#98;&#x2e;&#99;&#111;&#109;</a>:yourname&#x2F;yourname.github.io.git。即把网址中的<a target="_blank" rel="noopener" href="https://github.com/%E6%94%B9%E4%B8%BAgit@github.com:%E5%B0%B1%E5%8F%AF%E4%BB%A5%E4%BA%86%EF%BC%88%E4%B8%BB%E8%A6%81%E4%B8%8D%E8%A6%81%E6%BC%8F%E4%BA%86%E6%96%9C%E6%9D%A0%E5%92%8C%E5%86%92%E5%8F%B7%EF%BC%89">https://github.com/改为git@github.com:就可以了（主要不要漏了斜杠和冒号）</a></p>
+<p>此时可以打开config.yml配置文件,</p>
+<p>将repo: <a target="_blank" rel="noopener" href="https://github.com/yourname/yourname.github.io.git">https://github.com/yourname/yourname.github.io.git</a></p>
+<p>改为repo: <a href="mailto:&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#98;&#x2e;&#x63;&#111;&#x6d;">&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#98;&#x2e;&#x63;&#111;&#x6d;</a>:yourname&#x2F;yourname.github.io.git</p>
+<p>即把网址中的</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a></p>
+<p>改为</p>
+<p><a href="mailto:&#x67;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#x68;&#117;&#98;&#46;&#x63;&#111;&#109;">&#x67;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#x68;&#117;&#98;&#46;&#x63;&#111;&#109;</a>:</p>
+<p>就可以了（注意不要漏了 <em>斜杠</em> 和 <strong>冒号</strong> ）</p>
 <p><strong>4.其他问题</strong></p>
 <p> 1） ： （md文档中 ）冒号后面要有一个空格。</p>
 <p> 2） 如果使用hexo init命令时，返回一个bash: hexo: zommand not found。只需将命令hexo init改为npx hexo init即可。</p>
