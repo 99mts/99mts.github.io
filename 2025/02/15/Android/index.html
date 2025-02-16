@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="keywords" content="hexo,个人博客,blog" />
+  <meta name="description" content="99mts的个人博客" />
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+  
+  <link rel="dns-prefetch" href="https://widget.daovoice.io">
+  <link rel="dns-prefetch" href="https://widget-static-cdn.daovoice.io">
+  <link rel="dns-prefetch" href="https://im.daovoice.io">
+  
+  
+  <link rel="dns-prefetch" href="https://hm.baidu.com/">
+  
+  
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://api.github.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  
+  <link rel="stylesheet" type="text/css" href="/./style/main.d9e3dd.css">
+	<link rel="shortcut icon" href="/favicon.ico" title="Favicon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<title>Android</title>
+  
+  <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?awwssw1snsnsnn1ndndnndnd99j";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();
+  </script>
+  
+  
+    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/123456.js","daovoice");daovoice('init',{app_id: "123456"});daovoice('update');
+  </script>
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+<canvas id="pattern-placeholder" height="230"></canvas>
+<div class="navbar-header">
+  <a class="blog-title" href="/">MTS的blog</a>
+  <a class="face-img" href="/">
+    <img src="https://ods2.oddba.cn/user_files/74063/publish/post/95278945_1673715466.jpeg">
+  </a>
+</div>
+<main>
+  <div class="article-title">
+    
+  
+  <h1 class="title">
+    Android
+  </h1>
+  
+
+
+    <ul class="article-info">
+      <li>
+        发布
+        <time datetime="2025-02-15T03:54:37.000Z" itemprop="datePublished">2025-02-15</time>
+      </li>
+      <li>
+        
+    更新 <time datetime="2025-02-15T16:15:37.371Z" itemprop="dateUpdated">2025-02-16</time>
+
+      </li>
+      <li id="busuanzi_container_page_pv">
+        阅读 <span id="busuanzi_value_page_pv"></span>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="article">
+      <div class="content">
+        
+        <h3 id="配置Android-Studio-IDE"><a href="#配置Android-Studio-IDE" class="headerlink" title="配置Android Studio   (IDE)"></a>配置Android Studio   (IDE)</h3><p>视频网址</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV11dx7eUEsb?buvid=XY5F9F55429925F7DF2CEB847B49DD2D16954&from_spmid=main.my-history.0.0&is_story_h5=false&mid=1QOejA1JRdlCZMP1Q357jQ==&plat_id=116&share_from=ugc&share_medium=android&share_plat=android&share_session_id=39221298-30b6-4438-b268-f30af1b72b0d&share_source=WEIXIN&share_tag=s_i&spmid=united.player-video-detail.0.0&timestamp=1739503560&unique_k=jqnuhyW&up_id=453331049&share_source=weixin">https://www.bilibili.com/video/BV11dx7eUEsb?buvid=XY5F9F55429925F7DF2CEB847B49DD2D16954&amp;from_spmid=main.my-history.0.0&amp;is_story_h5=false&amp;mid=1QOejA1JRdlCZMP1Q357jQ%3D%3D&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=39221298-30b6-4438-b268-f30af1b72b0d&amp;share_source=WEIXIN&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1739503560&amp;unique_k=jqnuhyW&amp;up_id=453331049&amp;share_source=weixin</a></p>
+<h3 id="四大组件"><a href="#四大组件" class="headerlink" title="四大组件"></a>四大组件</h3><ul>
+<li><strong>Activity活动</strong> ：负责用户界面。</li>
+<li><strong>Service服务</strong> ：负责后台任务。</li>
+<li><strong>BroadcastReceiver广播接收器</strong> ：负责监听和响应广播消息。</li>
+<li><strong>ContentProvider内容提供者</strong> ：负责数据共享。</li>
+</ul>
+<p>日志工具Log</p>
+<p><em>.v  .d  .i  .w  .e</em></p>
+<p>项目目录结构</p>
+<p>&#x2F;&#x2F;AndroidStudioProjects<br>├── .gradle    自动化构建工具<br>├── .idea<br>├── &#x2F;&#x2F;app      项目<br>│   ├── libs     第三方jar包<br>│   └── &#x2F;&#x2F;src    核心目录<br>│       ├── androidTest    用于编写测试用例<br>│       └── &#x2F;&#x2F;main<br>│           ├── java     代码<br>│           └── res    资源文件<br>│           └── AndroidManifest.xml     配置文件<br>├── test [unitTest]<br>├── .gitignore<br>├── build.gradle.kts    编译规则<br>└── proguard-rules.pro        混淆规则</p>
+<h3 id="活动"><a href="#活动" class="headerlink" title="活动"></a>活动</h3><p>Toast  弹出的提示</p>
+<p>Menu  菜单</p>
+<p>finish  结束活动</p>
+<p>使用Intent可以切换活动</p>
+<p>​       分  显示与隐式</p>
+<p><strong>活动状态：</strong> 运行  暂停（可见） 停止（不可见）销毁</p>
+<h5 id="活动的生存期："><a href="#活动的生存期：" class="headerlink" title="活动的生存期："></a><strong>活动的生存期：</strong></h5><p>onCreate() 当活动第一次被创建时调用</p>
+<p>onStart() 当活动由不可见变为可见时调用</p>
+<p>onResume()  当活动进入前台并可以与用户交互时调用</p>
+<p>onPause()  当活动失去焦点但仍部分可见时调用（例如弹出对话框或切换到其他Activity）</p>
+<p>onStop()  当活动完全不可见时调用</p>
+<p>onDestroy()  当活动被销毁时调用</p>
+<p>onRestart()  当活动从停止状态重新启动时调用（即从不可见到可见）</p>
+<p><strong>常见场景分析</strong></p>
+<ol>
+<li><p>启动Activity </p>
+<p><code>onCreate()</code> → <code>onStart()</code> → <code>onResume()</code></p>
+</li>
+<li><p>切换到另一个Activity </p>
+<p>当前Activity：<code>onPause()</code> → <code>onStop()</code></p>
+<p>新Activity：<code>onCreate()</code> → <code>onStart()</code> → <code>onResume()</code></p>
+</li>
+<li><p>返回到原Activity </p>
+<p>原Activity：<code>onRestart()</code> → <code>onStart()</code> → <code>onResume()</code></p>
+</li>
+<li><p>退出Activity </p>
+<p><code>onPause()</code> → <code>onStop()</code> →<code>onDestroy()</code></p>
+</li>
+</ol>
+<h5 id="活动的启动模式"><a href="#活动的启动模式" class="headerlink" title="活动的启动模式 :"></a><strong>活动的启动模式 :</strong></h5><p><strong>1. standard（标准模式）</strong>每次启动都创建新实例，压入栈顶</p>
+<p><strong>2. singleTop（栈顶复用模式）</strong>如果目标Activity已在栈顶，则复用；否则创建新实例</p>
+<p><strong>3. singleTask（栈内复用模式）</strong>如果目标Activity已存在，则复用并清空其上的Activity；否则新建</p>
+<p><strong>4.singleInstance（单实例模式）</strong> 独立任务栈，全局唯一实例</p>
+<h2 id="UI（用户界面）"><a href="#UI（用户界面）" class="headerlink" title="UI（用户界面）"></a>UI（用户界面）</h2><p><strong>控件</strong></p>
+<p>TextView文本内容</p>
+<p>EditText可编程内容</p>
+<p>Button按钮</p>
+<p>ImageView图片</p>
+<p>ProgressBar进度条</p>
+<p>AlertDialog弹出对话框</p>
+<p><em>ProgressDialog弹出进度条   从 Android API 26 开始，ProgressDialog已被废弃，官方推荐使用 <code>ProgressBar</code> 或 <code>Dialog</code> 自定义实现进度对话框</em></p>
+<p><strong>xml类型</strong></p>
+<p>LinearLayout          （线性布局）</p>
+<p>RelativeLayout       （相对布局）</p>
+<p>FrameLayout          （帧  布  局）</p>
+<p>TableLayout            （表格布局）</p>
+<p>GridLayout              （网格布局）</p>
+<p>CoordinatorLayout（协调布局）</p>
+<p>ConstraintLayout   （约束布局）</p>
+
+      </div>
+        <div class="support-author">
+          <p>感谢您的阅读。 🙏
+          <a href="https://888.com/index.html" target="_blank">关于转载请看这里</a>
+            <!--<a class="btn-pay"  href="#pay-modal">¥ 打赏支持</a>-->
+          </p>
+        </div>
+        <!--
+            <div class="like ">
+              <div class="like-button">
+                <a id="like-note" href="">
+                  <i class="icon-heart"></i>喜欢
+                </a>
+              </div>
+              <span id="likes-count">256</span>
+            </div>
+        -->
+        <div class="otherLink">
+          <div class="previous">
+          </div>
+          <div class="next">
+          </div>
+        </div>
+        <div class="comments" id="comments">
+          
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  const gitalk = new Gitalk({
+    clientID: '8888a8888',
+    clientSecret: '8888886666666',
+    repo: 'xxxx.github.io',
+    owner: 'admin',
+    admin: ['admin'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false
+  })
+
+  gitalk.render('comments');
+</script>
+
+
+        </div>
+      </div>
+    </div>
+   </div>
+</main>
+<div class="footer">
+  <div class="info">
+    <p>
+    <a target="_blank" rel="noopener" href="https://hexo.io"> Hexo </a> 强力驱动 |
+      <a target="_blank" rel="noopener" href="https://github.com/Youthink/hexo-themes-yearn"> Yearn </a>
+      主题
+    </p>
+    <p>&copy;2024-2077 99mts的博客</p>
+  </div>
+</div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script>//console
+  var consoleConfig = '\n欢迎访问 https://hufangyun.com ，围观小猿大圣的博客(づ｡◕‿‿◕｡)づ！\n,\n本博客使用 %cHexo%c 搭建，博客主题为小猿大圣开发的 %chexo-themes-yearn%c ~~~ 🎉🎉🎉 \n\n源码 https://github.com/Youthink/hexo-themes-yearn \n\n如果喜欢可以 star 支持一下 ❤️~\n,\n扫描下面的二维码，在手机上查看博客！\n,https://static.hufangyun.com/blog-url-qrcode-180-180.png,\n 想知道这个效果如何实现的？博客内搜索 console 彩蛋 🚀 ！\n'.split(',');
+  var canConsole = true;
+  var consoleInfo = (function(consoleConfig) {
+  if (!canConsole || !consoleConfig || consoleConfig.length < 1) {
+    return;
+  }
+  var consoleColor = '#6190e8';
+  var _console;
+  var backgroundTextStyle = 'padding: 1px 5px;color: #fff;background: ' + consoleColor + ';'
+  var textStyle = 'color: ' + consoleColor + ';';
+
+  consoleConfig.map(o => {
+    var num = (o.match(/%c/g) || []).length;
+    if(/^http(s)?:\/\//.test(o)) {
+      console.log('%c     ', 'background: url(' + o + ') no-repeat left center;font-size: 180px;');
+      return;
+    }
+    if (num > 0) {
+      var logArguments = [];
+      for (var i = 0; i < num; i++) {
+        if (i % 2 === 0) {
+          logArguments.push(backgroundTextStyle);
+        } else {
+          logArguments.push(textStyle);
+        }
+      }
+      (_console = console).log.apply(_console, ['%c' + o, textStyle].concat(logArguments));
+      return;
+    }
+    console.log('%c' + o, textStyle);
+  });
+}(consoleConfig));</script><script type="text/javascript" src="/./js/main.d9e3dd.js"></script>
+
+</body>
+</html>
