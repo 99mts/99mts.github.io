@@ -59,7 +59,7 @@
       </li>
       <li>
         
-    更新 <time datetime="2024-12-26T04:29:20.125Z" itemprop="dateUpdated">2024-12-26</time>
+    更新 <time datetime="2025-02-18T12:50:18.413Z" itemprop="dateUpdated">2025-02-18</time>
 
       </li>
       <li id="busuanzi_container_page_pv">
@@ -108,18 +108,67 @@
 <li><strong>多态</strong></li>
 </ul>
 <p>表现为：对象多态，行为多态。</p>
+<p>如：方法名相同，参数列表不同。</p>
+<p>………    add(int a,int b){return a+b;}</p>
+<p>………    add(int a,int b,int c){return a+b+c;}</p>
+<p>………    add(double a,double b){return a+b;}</p>
 <ul>
-<li><strong>final</strong></li>
-<li><strong>枚举</strong></li>
-<li><strong>抽象</strong></li>
-<li><strong>接口</strong></li>
+<li><p><strong>final</strong> </p>
+<p>最终方法，被final修饰后，不能被继承，也不能被重写</p>
+</li>
+<li><p><strong>枚举</strong></p>
+<p>修饰符enum枚举类名{</p>
+<p>​	名称1，名称2，…；         比如 public enum A {</p>
+<p>​    其他成员…                                       x，y，z；</p>
+<p>}                                                             …     }</p>
+<p>枚举类很适合做信息的分类和标志。</p>
+</li>
+<li><p><strong>抽象</strong></p>
+<p>抽象类不能用 <code>new</code> 关键字创建对象</p>
+<p>抽象类主要用于作为父类定义一个模板，让子类继承并实现其方法。</p>
+<p>应用场景 ：</p>
+<p>当父类知道每个子类都要执行某个行为，但具体实现方式不同。</p>
+<p>父类可以定义抽象方法，交给子类去重写实现。</p>
+<p>好处 ：</p>
+<p>通过抽象类和抽象方法，可以更好地支持面向对象编程中的多态特性</p>
+<p>抽象类可以包含一些通用的方法实现供子类继承使用，有利于代码复用</p>
+<p>抽象类可以强制子类实现某些方法，确保子类的行为符合预期</p>
+</li>
+<li><p><strong>接口</strong></p>
+<p>Java 提供了一个关键字 <code>interface</code> 来定义接口</p>
+<p>实现类必须重写接口中所有的抽象方法，否则该类需要被定义为抽象类</p>
+<p>一个类可以同时实现多个接口，接口不能创建对象</p>
+<p>&#x2F;&#x2F; 定义接口 InterfaceA<br>public interface InterfaceA {void methodA();}</p>
+<p>&#x2F;&#x2F; 定义接口 InterfaceB<br>public interface InterfaceB {void methodB();}</p>
+<p>&#x2F;&#x2F; 实现类 M 实现了两个接口<br>public class M implements InterfaceA, InterfaceB {<br>@Override<br>public void methodA() {<br>    System.out.println(“Method A implemented”);<br>​    }  </p>
+<p>   @Override<br>public void methodB() {<br>    System.out.println(“Method B implemented”);<br>​    }</p>
+<p>}</p>
+</li>
 </ul>
 <h2 id="高级"><a href="#高级" class="headerlink" title="高级"></a>高级</h2><ul>
-<li><strong>代码块</strong></li>
-<li><strong>内部类</strong></li>
-<li><strong>函数式编程</strong></li>
-<li><strong>常用API</strong></li>
-<li><strong>GUI编程</strong></li>
+<li><p><strong>代码块</strong></p>
+<p>静态代码块 static { }只执行一次，用于初始化赋值，先于main方法执行</p>
+<p>实例代码块 { } 每次创建对象时执行</p>
+</li>
+<li><p><strong>内部类</strong></p>
+<p>如果一个类定义在另一个类的内部，就是内部类。</p>
+<p>成员内部类，静态内部类，局部内部类，匿名内部类。</p>
+<p><strong>匿名内部类：</strong></p>
+<p>特点 ：匿名内部类本质就是一个子类，并会立即创建出一个子类对象。</p>
+<p>作用 ：简化代码，用于更方便的创建一个子类对象</p>
+<p>new 类或接口(参数值…) {      new Animal() {<br>类体(一般是方法重写);                 @Override<br>};                                                        public void cry( )  {  }    </p>
+<p>​                                                  };</p>
+</li>
+<li><p><strong>函数式编程</strong></p>
+<p>用于简化代码</p>
+<p>Lambda</p>
+<p>方法引用</p>
+</li>
+<li><p><strong>常用API</strong></p>
+<p>就是引用函数</p>
+<p>String</p>
+<p>ArrayList</p>
+</li>
 </ul>
 
       </div>
