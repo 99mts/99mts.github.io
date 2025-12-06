@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="keywords" content="hexo,个人博客,blog" />
+  <meta name="description" content="99mts的个人博客" />
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+  
+  <link rel="dns-prefetch" href="https://widget.daovoice.io">
+  <link rel="dns-prefetch" href="https://widget-static-cdn.daovoice.io">
+  <link rel="dns-prefetch" href="https://im.daovoice.io">
+  
+  
+  <link rel="dns-prefetch" href="https://hm.baidu.com/">
+  
+  
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://api.github.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  
+  <link rel="stylesheet" type="text/css" href="/./style/main.d9e3dd.css">
+	<link rel="shortcut icon" href="/favicon.ico" title="Favicon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<title>web</title>
+  
+  <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?awwssw1snsnsnn1ndndnndnd99j";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();
+  </script>
+  
+  
+    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/123456.js","daovoice");daovoice('init',{app_id: "123456"});daovoice('update');
+  </script>
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+<canvas id="pattern-placeholder" height="230"></canvas>
+<div class="navbar-header">
+  <a class="blog-title" href="/">MTS的blog</a>
+  <a class="face-img" href="/">
+    <img src="https://ods2.oddba.cn/user_files/74063/publish/post/95278945_1673715466.jpeg">
+  </a>
+</div>
+<main>
+  <div class="article-title">
+    
+  
+  <h1 class="title">
+    web
+  </h1>
+  
+
+
+    <ul class="article-info">
+      <li>
+        发布
+        <time datetime="2025-12-06T06:46:16.000Z" itemprop="datePublished">2025-12-06</time>
+      </li>
+      <li>
+        
+    更新 <time datetime="2025-12-06T06:48:05.011Z" itemprop="dateUpdated">2025-12-06</time>
+
+      </li>
+      <li id="busuanzi_container_page_pv">
+        阅读 <span id="busuanzi_value_page_pv"></span>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="article">
+      <div class="content">
+        
+        <p>0</p>
+<p>web</p>
+<p>鲜</p>
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+<pre><code>&lt;meta charset=&quot;UTF-8&quot;&gt;
+
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+</code></pre>
+  <title>小兔鲜儿 - 新鲜水果、时令蔬菜，新鲜直达</title>
+
+<pre><code>&lt;style&gt;
+</code></pre>
+<p>​    &#x2F;* 基础样式重置 *&#x2F;</p>
+<p>​    * {</p>
+<p>​      margin: 0;</p>
+<p>​      padding: 0;</p>
+<p>​      box-sizing: border-box;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    body {</p>
+<p>​      font-family: -apple-system, BlinkMacSystemFont, ‘Segoe UI’, Roboto, ‘Helvetica Neue’, Arial, sans-serif;</p>
+<p>​      color: #333;</p>
+<p>​      background-color: #f5f5f5;</p>
+<p>​      line-height: 1.5;</p>
+<p>​      &#x2F;* 添加平滑滚动 *&#x2F;</p>
+<p>​      scroll-behavior: smooth;</p>
+<p>​      -webkit-font-smoothing: antialiased;</p>
+<p>​      -moz-osx-font-smoothing: grayscale;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .container {</p>
+<p>​      width: 1200px;</p>
+<p>​      margin: 0 auto;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    a {</p>
+<p>​      text-decoration: none;</p>
+<p>​      color: #666;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    ul {</p>
+<p>​      list-style: none;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    img {</p>
+<p>​      vertical-align: middle;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    &#x2F;* 顶部导航栏 *&#x2F;</p>
+<p>​    .top-nav {</p>
+<p>​      background-color: #f5f5f5;</p>
+<p>​      height: 30px;</p>
+<p>​      line-height: 30px;</p>
+<p>​      border-bottom: 1px solid #eee;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .top-nav .container {</p>
+<p>​      display: flex;</p>
+<p>​      justify-content: space-between;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .top-nav ul {</p>
+<p>​      display: flex;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .top-nav li {</p>
+<p>​      margin-right: 20px;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .top-nav li a:hover {</p>
+<p>​      color: #ff6700;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    &#x2F;* 主导航栏 *&#x2F;</p>
+<p>​    .main-nav {</p>
+<p>​      background-color: #fff;</p>
+<p>​      padding: 20px 0;</p>
+<p>​      box-shadow: 0 2px 10px rgba(0,0,0,0.1);</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .main-nav .container {</p>
+<p>​      display: flex;</p>
+<p>​      align-items: center;</p>
+<p>​      justify-content: space-between;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .logo {</p>
+<p>​      font-size: 30px;</p>
+<p>​      font-weight: bold;</p>
+<p>​      color: #ff6700;</p>
+<p>​      display: flex;</p>
+<p>​      align-items: center;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .logo img {</p>
+<p>​      width: 40px;</p>
+<p>​      height: 40px;</p>
+<p>​      margin-right: 10px;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .search {</p>
+<p>​      display: flex;</p>
+<p>​      align-items: center;</p>
+<p>​      flex: 1;</p>
+<p>​      max-width: 600px;</p>
+<p>​      margin: 0 40px;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .search input {</p>
+<p>​      width: 100%;</p>
+<p>​      height: 40px;</p>
+<p>​      padding: 0 15px;</p>
+<p>​      border: 2px solid #ff6700;</p>
+<p>​      border-radius: 20px 0 0 20px;</p>
+<p>​      outline: none;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .search button {</p>
+<p>​      height: 40px;</p>
+<p>​      padding: 0 20px;</p>
+<p>​      background-color: #ff6700;</p>
+<p>​      color: #fff;</p>
+<p>​      border: none;</p>
+<p>​      border-radius: 0 20px 20px 0;</p>
+<p>​      cursor: pointer;</p>
+<p>​      font-weight: bold;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .cart {</p>
+<p>​      position: relative;</p>
+<p>​      font-size: 20px;</p>
+<p>​      cursor: pointer;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .cart-count {</p>
+<p>​      position: absolute;</p>
+<p>​      top: -10px;</p>
+<p>​      right: -10px;</p>
+<p>​      background-color: #ff6700;</p>
+<p>​      color: #fff;</p>
+<p>​      font-size: 12px;</p>
+<p>​      padding: 2px 6px;</p>
+<p>​      border-radius: 10px;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    &#x2F;* 分类导航 *&#x2F;</p>
+<p>​    .category-nav {</p>
+<p>​      background-color: #ff6700;</p>
+<p>​      color: #fff;</p>
+<p>​      height: 50px;</p>
+<p>​      line-height: 50px;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .category-nav .container {</p>
+<p>​      display: flex;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .category-title {</p>
+<p>​      width: 200px;</p>
+<p>​      background-color: #ff5252;</p>
+<p>​      text-align: center;</p>
+<p>​      font-weight: bold;</p>
+<p>​      position: relative;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .category-menu {</p>
+<p>​      flex: 1;</p>
+<p>​      display: flex;</p>
+<p>​      justify-content: space-around;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .category-menu li a {</p>
+<p>​      color: #fff;</p>
+<p>​      font-weight: bold;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    &#x2F;* 轮播图 *&#x2F;</p>
+<p>​    .banner {</p>
+<p>​      background-color: #f0f9ff;</p>
+<p>​      padding: 20px 0;</p>
+<p>​      margin-bottom: 20px;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .banner .container {</p>
+<p>​      position: relative;</p>
+<p>​      height: 400px;</p>
+<p>​      overflow: hidden;</p>
+<p>​      border-radius: 10px;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .banner img {</p>
+<p>​      width: 100%;</p>
+<p>​      height: 100%;</p>
+<p>​      object-fit: cover;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    &#x2F;* 商品区域 *&#x2F;</p>
+<p>​    .product-section {</p>
+<p>​      margin-bottom: 40px;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .section-title {</p>
+<p>​      display: flex;</p>
+<p>​      justify-content: space-between;</p>
+<p>​      align-items: center;</p>
+<p>​      margin-bottom: 20px;</p>
+<p>​      padding-bottom: 10px;</p>
+<p>​      border-bottom: 2px solid #ff6700;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .section-title h2 {</p>
+<p>​      color: #333;</p>
+<p>​      font-size: 24px;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .section-title a {</p>
+<p>​      color: #666;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .product-list {</p>
+<p>​      display: grid;</p>
+<p>​      grid-template-columns: repeat(5, 1fr);</p>
+<p>​      gap: 20px;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .product-item {</p>
+<p>​      background-color: #fff;</p>
+<p>​      border-radius: 8px;</p>
+<p>​      overflow: hidden;</p>
+<p>​      transition: transform 0.3s, box-shadow 0.3s;</p>
+<p>​      cursor: pointer;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .product-item:hover {</p>
+<p>​      transform: translateY(-5px);</p>
+<p>​      box-shadow: 0 5px 20px rgba(0,0,0,0.1);</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .product-img {</p>
+<p>​      width: 100%;</p>
+<p>​      height: 200px;</p>
+<p>​      overflow: hidden;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .product-img img {</p>
+<p>​      width: 100%;</p>
+<p>​      height: 100%;</p>
+<p>​      object-fit: cover;</p>
+<p>​      transition: transform 0.3s;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .product-item:hover .product-img img {</p>
+<p>​      transform: scale(1.1);</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .product-info {</p>
+<p>​      padding: 15px;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .product-title {</p>
+<p>​      font-size: 16px;</p>
+<p>​      margin-bottom: 10px;</p>
+<p>​      height: 48px;</p>
+<p>​      overflow: hidden;</p>
+<p>​      text-overflow: ellipsis;</p>
+<p>​      display: -webkit-box;</p>
+<p>​      -webkit-line-clamp: 2;</p>
+<p>​      -webkit-box-orient: vertical;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .product-price {</p>
+<p>​      color: #ff6700;</p>
+<p>​      font-size: 18px;</p>
+<p>​      font-weight: bold;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .product-original-price {</p>
+<p>​      color: #999;</p>
+<p>​      font-size: 14px;</p>
+<p>​      text-decoration: line-through;</p>
+<p>​      margin-left: 10px;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    &#x2F;* 品牌专区 *&#x2F;</p>
+<p>​    .brand-section {</p>
+<p>​      background-color: #fff;</p>
+<p>​      padding: 30px 0;</p>
+<p>​      margin-bottom: 40px;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .brand-list {</p>
+<p>​      display: grid;</p>
+<p>​      grid-template-columns: repeat(6, 1fr);</p>
+<p>​      gap: 20px;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .brand-item {</p>
+<p>​      text-align: center;</p>
+<p>​      padding: 20px;</p>
+<p>​      border: 1px solid #eee;</p>
+<p>​      border-radius: 8px;</p>
+<p>​      transition: all 0.3s;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .brand-item:hover {</p>
+<p>​      border-color: #ff6700;</p>
+<p>​      transform: translateY(-5px);</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .brand-item img {</p>
+<p>​      width: 80px;</p>
+<p>​      height: 80px;</p>
+<p>​      margin-bottom: 10px;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    &#x2F;* 页脚 *&#x2F;</p>
+<p>​    footer {</p>
+<p>​      background-color: #333;</p>
+<p>​      color: #fff;</p>
+<p>​      padding: 30px 0;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .footer-top {</p>
+<p>​      display: grid;</p>
+<p>​      grid-template-columns: repeat(4, 1fr);</p>
+<p>​      gap: 40px;</p>
+<p>​      margin-bottom: 30px;</p>
+<p>​      padding-bottom: 30px;</p>
+<p>​      border-bottom: 1px solid #444;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .footer-column h3 {</p>
+<p>​      margin-bottom: 20px;</p>
+<p>​      font-size: 18px;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .footer-column ul li {</p>
+<p>​      margin-bottom: 10px;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .footer-column ul li a {</p>
+<p>​      color: #999;</p>
+<p>​      transition: color 0.3s;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .footer-column ul li a:hover {</p>
+<p>​      color: #ff6700;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    .footer-bottom {</p>
+<p>​      text-align: center;</p>
+<p>​      color: #999;</p>
+<p>​      font-size: 14px;</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    &#x2F;* 响应式设计 *&#x2F;</p>
+<p>​    @media (max-width: 1200px) {</p>
+<p>​      .container {</p>
+<p>​        width: 90%;</p>
+<p>​      }</p>
+<p>​      </p>
+<p>​      .category-menu {</p>
+<p>​        justify-content: space-between;</p>
+<p>​        overflow-x: auto;</p>
+<p>​        white-space: nowrap;</p>
+<p>​        padding: 0 10px;</p>
+<p>​      }</p>
+<p>​      </p>
+<p>​      .category-menu li {</p>
+<p>​        margin-right: 15px;</p>
+<p>​        flex-shrink: 0;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    @media (max-width: 768px) {</p>
+<p>​      .product-list {</p>
+<p>​        grid-template-columns: repeat(2, 1fr);</p>
+<p>​        gap: 15px;</p>
+<p>​      }</p>
+<p>​      </p>
+<p>​      .brand-list {</p>
+<p>​        grid-template-columns: repeat(3, 1fr);</p>
+<p>​        gap: 15px;</p>
+<p>​      }</p>
+<p>​      </p>
+<p>​      .footer-top {</p>
+<p>​        grid-template-columns: repeat(2, 1fr);</p>
+<p>​        gap: 20px;</p>
+<p>​      }</p>
+<p>​      </p>
+<p>​      .main-nav .container {</p>
+<p>​        flex-wrap: wrap;</p>
+<p>​      }</p>
+<p>​      </p>
+<p>​      .logo {</p>
+<p>​        width: 100%;</p>
+<p>​        text-align: center;</p>
+<p>​        margin-bottom: 15px;</p>
+<p>​      }</p>
+<p>​      </p>
+<p>​      .search {</p>
+<p>​        margin: 0;</p>
+<p>​        width: 100%;</p>
+<p>​        margin-bottom: 15px;</p>
+<p>​      }</p>
+<p>​      </p>
+<p>​      .cart {</p>
+<p>​        margin: 0 auto;</p>
+<p>​      }</p>
+<p>​      </p>
+<p>​      .banner .container {</p>
+<p>​        height: 200px;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    @media (max-width: 480px) {</p>
+<p>​      .product-list {</p>
+<p>​        grid-template-columns: 1fr;</p>
+<p>​      }</p>
+<p>​      </p>
+<p>​      .brand-list {</p>
+<p>​        grid-template-columns: repeat(2, 1fr);</p>
+<p>​      }</p>
+<p>​      </p>
+<p>​      .footer-top {</p>
+<p>​        grid-template-columns: 1fr;</p>
+<p>​      }</p>
+<p>​      </p>
+<p>​      .top-nav {</p>
+<p>​        display: none;</p>
+<p>​      }</p>
+<p>​      </p>
+<p>​      .category-title {</p>
+<p>​        width: 120px;</p>
+<p>​        font-size: 14px;</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>  </style></p>
+</head>
+
+<body>
+
+  <!-- 顶部导航栏 -->
+
+<pre><code>&lt;div class=&quot;top-nav&quot;&gt;
+
+    &lt;div class=&quot;container&quot;&gt;
+</code></pre>
+<p>​      <ul></p>
+<p>​        <li><a href="#">欢迎来到小兔鲜儿</a></li></p>
+<p>​        <li><a href="#">登录</a></li></p>
+<p>​        <li><a href="#">注册</a></li></p>
+<p>​      </ul></p>
+<p>​      <ul></p>
+<p>​        <li><a href="#">我的订单</a></li></p>
+<p>​        <li><a href="#">客户服务</a></li></p>
+<p>​        <li><a href="#">联系我们</a></li></p>
+<p>​      </ul></p>
+<p>​    </div></p>
+  </div>
+
+  
+
+  <!-- 主导航栏 -->
+
+<pre><code>&lt;div class=&quot;main-nav&quot;&gt;
+
+    &lt;div class=&quot;container&quot;&gt;
+
+        &lt;div class=&quot;logo&quot;&gt;
+</code></pre>
+<p>​        <span>🐰小兔鲜儿</span></p>
+<p>​      </div></p>
+<pre><code>        &lt;div class=&quot;search&quot;&gt;
+</code></pre>
+<p>​        <input type="text" placeholder="搜索新鲜水果、蔬菜..."></p>
+<p>​        <button>搜索</button></p>
+<p>​      </div></p>
+<pre><code>        &lt;div class=&quot;cart&quot;&gt;
+</code></pre>
+<p>​        🛒 <span class="cart-count">3</span></p>
+<p>​      </div></p>
+<p>​    </div></p>
+  </div>
+
+  
+
+  <!-- 分类导航 -->
+
+<pre><code>&lt;div class=&quot;category-nav&quot;&gt;
+
+    &lt;div class=&quot;container&quot;&gt;
+
+        &lt;div class=&quot;category-title&quot;&gt;全部商品分类&lt;/div&gt;
+</code></pre>
+<p>​      <ul class="category-menu"></p>
+<p>​        <li><a href="#">新鲜水果</a></li></p>
+<p>​        <li><a href="#">时令蔬菜</a></li></p>
+<p>​        <li><a href="#">肉禽蛋品</a></li></p>
+<p>​        <li><a href="#">海鲜水产</a></li></p>
+<p>​        <li><a href="#">粮油调味</a></li></p>
+<p>​        <li><a href="#">休闲零食</a></li></p>
+<p>​        <li><a href="#">乳品烘焙</a></li></p>
+<p>​        <li><a href="#">酒水饮料</a></li></p>
+<p>​      </ul></p>
+<p>​    </div></p>
+  </div>
+
+  
+
+  <!-- 轮播图 -->
+
+<pre><code>&lt;div class=&quot;banner&quot;&gt;
+
+    &lt;div class=&quot;container&quot;&gt;
+</code></pre>
+<p>​            <img src="https://picsum.photos/1200/400?random=1" alt="新鲜水果促销活动"></p>
+<p>​    </div></p>
+  </div>
+
+  
+
+  <!-- 推荐商品 -->
+
+<pre><code>&lt;div class=&quot;container&quot;&gt;
+
+    &lt;div class=&quot;product-section&quot;&gt;
+
+        &lt;div class=&quot;section-title&quot;&gt;
+</code></pre>
+<p>​        <h2>今日推荐</h2></p>
+<p>​                <a href="#">查看更多 &gt;</a></p>
+<p>​      </div></p>
+<pre><code>        &lt;div class=&quot;product-list&quot;&gt;
+</code></pre>
+<p>​        <!-- 商品1 --></p>
+<pre><code>            &lt;div class=&quot;product-item&quot;&gt;
+
+                &lt;div class=&quot;product-img&quot;&gt;
+</code></pre>
+<p>​                        <img src="https://picsum.photos/300/300?random=10" alt="新疆阿克苏苹果"></p>
+<p>​          </div></p>
+<pre><code>                &lt;div class=&quot;product-info&quot;&gt;
+
+                    &lt;div class=&quot;product-title&quot;&gt;新疆阿克苏苹果 冰糖心 脆甜多汁 新鲜水果&lt;/div&gt;
+
+                    &lt;div&gt;
+</code></pre>
+<p>​              <span class="product-price">¥29.9</span></p>
+<p>​              <span class="product-original-price">¥39.9</span></p>
+<p>​            </div></p>
+<p>​          </div></p>
+<p>​        </div></p>
+<p>​        </p>
+<p>​        <!-- 商品2 --></p>
+<pre><code>            &lt;div class=&quot;product-item&quot;&gt;
+
+                &lt;div class=&quot;product-img&quot;&gt;
+</code></pre>
+<p>​                        <img src="https://picsum.photos/300/300?random=11" alt="泰国山竹"></p>
+<p>​          </div></p>
+<pre><code>                &lt;div class=&quot;product-info&quot;&gt;
+
+                    &lt;div class=&quot;product-title&quot;&gt;泰国进口山竹 新鲜水果 热带水果 皇后水果&lt;/div&gt;
+
+                    &lt;div&gt;
+</code></pre>
+<p>​              <span class="product-price">¥59.9</span></p>
+<p>​              <span class="product-original-price">¥79.9</span></p>
+<p>​            </div></p>
+<p>​          </div></p>
+<p>​        </div></p>
+<p>​        </p>
+<p>​        <!-- 商品3 --></p>
+<pre><code>            &lt;div class=&quot;product-item&quot;&gt;
+
+                &lt;div class=&quot;product-img&quot;&gt;
+</code></pre>
+<p>​                        <img src="https://picsum.photos/300/300?random=12" alt="海南芒果"></p>
+<p>​          </div></p>
+<pre><code>                &lt;div class=&quot;product-info&quot;&gt;
+
+                    &lt;div class=&quot;product-title&quot;&gt;海南金煌芒果 新鲜大芒果 甜心芒果 水果之王&lt;/div&gt;
+
+                    &lt;div&gt;
+</code></pre>
+<p>​              <span class="product-price">¥39.9</span></p>
+<p>​              <span class="product-original-price">¥49.9</span></p>
+<p>​            </div></p>
+<p>​          </div></p>
+<p>​        </div></p>
+<p>​        </p>
+<p>​        <!-- 商品4 --></p>
+<pre><code>            &lt;div class=&quot;product-item&quot;&gt;
+
+                &lt;div class=&quot;product-img&quot;&gt;
+</code></pre>
+<p>​                        <img src="https://picsum.photos/300/300?random=13" alt="云南蓝莓"></p>
+<p>​          </div></p>
+<pre><code>                &lt;div class=&quot;product-info&quot;&gt;
+
+                    &lt;div class=&quot;product-title&quot;&gt;云南新鲜蓝莓 当季水果 富含花青素 护眼佳品&lt;/div&gt;
+
+                    &lt;div&gt;
+</code></pre>
+<p>​              <span class="product-price">¥29.9</span></p>
+<p>​              <span class="product-original-price">¥39.9</span></p>
+<p>​            </div></p>
+<p>​          </div></p>
+<p>​        </div></p>
+<p>​        </p>
+<p>​        <!-- 商品5 --></p>
+<pre><code>            &lt;div class=&quot;product-item&quot;&gt;
+
+                &lt;div class=&quot;product-img&quot;&gt;
+</code></pre>
+<p>​                        <img src="https://picsum.photos/300/300?random=14" alt="宁夏硒砂瓜"></p>
+<p>​          </div></p>
+<pre><code>                &lt;div class=&quot;product-info&quot;&gt;
+
+                    &lt;div class=&quot;product-title&quot;&gt;宁夏硒砂瓜 沙漠西瓜 甜美多汁 富含硒元素&lt;/div&gt;
+
+                    &lt;div&gt;
+</code></pre>
+<p>​              <span class="product-price">¥49.9</span></p>
+<p>​              <span class="product-original-price">¥69.9</span></p>
+<p>​            </div></p>
+<p>​          </div></p>
+<p>​        </div></p>
+<p>​      </div></p>
+<p>​    </div></p>
+<p>​    </p>
+<p>​    <!-- 时令蔬菜 --></p>
+<pre><code>    &lt;div class=&quot;product-section&quot;&gt;
+
+        &lt;div class=&quot;section-title&quot;&gt;
+</code></pre>
+<p>​        <h2>时令蔬菜</h2></p>
+<p>​                <a href="#">查看更多 &gt;</a></p>
+<p>​      </div></p>
+<pre><code>        &lt;div class=&quot;product-list&quot;&gt;
+</code></pre>
+<p>​        <!-- 蔬菜1 --></p>
+<pre><code>            &lt;div class=&quot;product-item&quot;&gt;
+
+                &lt;div class=&quot;product-img&quot;&gt;
+</code></pre>
+<p>​                        <img src="https://picsum.photos/300/300?random=20" alt="有机生菜"></p>
+<p>​          </div></p>
+<pre><code>                &lt;div class=&quot;product-info&quot;&gt;
+
+                    &lt;div class=&quot;product-title&quot;&gt;有机生菜 新鲜蔬菜 沙拉蔬菜 即食生菜&lt;/div&gt;
+
+                    &lt;div&gt;
+</code></pre>
+<p>​              <span class="product-price">¥9.9</span></p>
+<p>​              <span class="product-original-price">¥12.9</span></p>
+<p>​            </div></p>
+<p>​          </div></p>
+<p>​        </div></p>
+<p>​        </p>
+<p>​        <!-- 蔬菜2 --></p>
+<pre><code>            &lt;div class=&quot;product-item&quot;&gt;
+
+                &lt;div class=&quot;product-img&quot;&gt;
+</code></pre>
+<p>​                        <img src="https://picsum.photos/300/300?random=21" alt="西红柿"></p>
+<p>​          </div></p>
+<pre><code>                &lt;div class=&quot;product-info&quot;&gt;
+
+                    &lt;div class=&quot;product-title&quot;&gt;新鲜西红柿 番茄 有机种植 自然成熟&lt;/div&gt;
+
+                    &lt;div&gt;
+</code></pre>
+<p>​              <span class="product-price">¥12.9</span></p>
+<p>​              <span class="product-original-price">¥15.9</span></p>
+<p>​            </div></p>
+<p>​          </div></p>
+<p>​        </div></p>
+<p>​        </p>
+<p>​        <!-- 蔬菜3 --></p>
+<pre><code>            &lt;div class=&quot;product-item&quot;&gt;
+
+                &lt;div class=&quot;product-img&quot;&gt;
+</code></pre>
+<p>​                        <img src="https://picsum.photos/300/300?random=22" alt="黄瓜"></p>
+<p>​          </div></p>
+<pre><code>                &lt;div class=&quot;product-info&quot;&gt;
+
+                    &lt;div class=&quot;product-title&quot;&gt;新鲜黄瓜 脆嫩爽口 水果黄瓜 无农药&lt;/div&gt;
+
+                    &lt;div&gt;
+</code></pre>
+<p>​              <span class="product-price">¥8.9</span></p>
+<p>​              <span class="product-original-price">¥10.9</span></p>
+<p>​            </div></p>
+<p>​          </div></p>
+<p>​        </div></p>
+<p>​        </p>
+<p>​        <!-- 蔬菜4 --></p>
+<pre><code>            &lt;div class=&quot;product-item&quot;&gt;
+
+                &lt;div class=&quot;product-img&quot;&gt;
+</code></pre>
+<p>​                        <img src="https://picsum.photos/300/300?random=23" alt="西兰花"></p>
+<p>​          </div></p>
+<pre><code>                &lt;div class=&quot;product-info&quot;&gt;
+
+                    &lt;div class=&quot;product-title&quot;&gt;新鲜西兰花 绿菜花 营养丰富 宝宝蔬菜&lt;/div&gt;
+
+                    &lt;div&gt;
+</code></pre>
+<p>​              <span class="product-price">¥15.9</span></p>
+<p>​              <span class="product-original-price">¥19.9</span></p>
+<p>​            </div></p>
+<p>​          </div></p>
+<p>​        </div></p>
+<p>​        </p>
+<p>​        <!-- 蔬菜5 --></p>
+<pre><code>            &lt;div class=&quot;product-item&quot;&gt;
+
+                &lt;div class=&quot;product-img&quot;&gt;
+</code></pre>
+<p>​                        <img src="https://picsum.photos/300/300?random=24" alt="胡萝卜"></p>
+<p>​          </div></p>
+<pre><code>                &lt;div class=&quot;product-info&quot;&gt;
+
+                    &lt;div class=&quot;product-title&quot;&gt;新鲜胡萝卜 有机种植 富含胡萝卜素&lt;/div&gt;
+
+                    &lt;div&gt;
+</code></pre>
+<p>​              <span class="product-price">¥7.9</span></p>
+<p>​              <span class="product-original-price">¥9.9</span></p>
+<p>​            </div></p>
+<p>​          </div></p>
+<p>​        </div></p>
+<p>​      </div></p>
+<p>​    </div></p>
+  </div>
+
+  
+
+  <!-- 品牌专区 -->
+
+<pre><code>&lt;div class=&quot;brand-section&quot;&gt;
+
+    &lt;div class=&quot;container&quot;&gt;
+
+        &lt;div class=&quot;section-title&quot;&gt;
+</code></pre>
+<p>​        <h2>合作品牌</h2></p>
+<p>​      </div></p>
+<pre><code>        &lt;div class=&quot;brand-list&quot;&gt;
+
+            &lt;div class=&quot;brand-item&quot;&gt;
+</code></pre>
+<p>​                    <img src="https://picsum.photos/100/100?random=30" alt="品牌1"></p>
+<pre><code>                &lt;div&gt;品牌名称1&lt;/div&gt;
+</code></pre>
+<p>​        </div></p>
+<pre><code>            &lt;div class=&quot;brand-item&quot;&gt;
+</code></pre>
+<p>​                    <img src="https://picsum.photos/100/100?random=31" alt="品牌2"></p>
+<pre><code>                &lt;div&gt;品牌名称2&lt;/div&gt;
+</code></pre>
+<p>​        </div></p>
+<pre><code>            &lt;div class=&quot;brand-item&quot;&gt;
+</code></pre>
+<p>​                    <img src="https://picsum.photos/100/100?random=32" alt="品牌3"></p>
+<pre><code>                &lt;div&gt;品牌名称3&lt;/div&gt;
+</code></pre>
+<p>​        </div></p>
+<pre><code>            &lt;div class=&quot;brand-item&quot;&gt;
+</code></pre>
+<p>​                    <img src="https://picsum.photos/100/100?random=33" alt="品牌4"></p>
+<pre><code>                &lt;div&gt;品牌名称4&lt;/div&gt;
+</code></pre>
+<p>​        </div></p>
+<pre><code>            &lt;div class=&quot;brand-item&quot;&gt;
+</code></pre>
+<p>​                    <img src="https://picsum.photos/100/100?random=34" alt="品牌5"></p>
+<pre><code>                &lt;div&gt;品牌名称5&lt;/div&gt;
+</code></pre>
+<p>​        </div></p>
+<pre><code>            &lt;div class=&quot;brand-item&quot;&gt;
+</code></pre>
+<p>​                    <img src="https://picsum.photos/100/100?random=35" alt="品牌6"></p>
+<pre><code>                &lt;div&gt;品牌名称6&lt;/div&gt;
+</code></pre>
+<p>​        </div></p>
+<p>​      </div></p>
+<p>​    </div></p>
+  </div>
+
+  
+
+  <!-- 页脚 -->
+
+  <footer>
+
+<pre><code>    &lt;div class=&quot;container&quot;&gt;
+
+        &lt;div class=&quot;footer-top&quot;&gt;
+
+            &lt;div class=&quot;footer-column&quot;&gt;
+</code></pre>
+<p>​          <h3>关于我们</h3></p>
+<p>​          <ul></p>
+<p>​            <li><a href="#">企业简介</a></li></p>
+<p>​            <li><a href="#">发展历程</a></li></p>
+<p>​            <li><a href="#">企业文化</a></li></p>
+<p>​            <li><a href="#">联系我们</a></li></p>
+<p>​          </ul></p>
+<p>​        </div></p>
+<pre><code>            &lt;div class=&quot;footer-column&quot;&gt;
+</code></pre>
+<p>​          <h3>客户服务</h3></p>
+<p>​          <ul></p>
+<p>​            <li><a href="#">配送说明</a></li></p>
+<p>​            <li><a href="#">退款政策</a></li></p>
+<p>​            <li><a href="#">常见问题</a></li></p>
+<p>​            <li><a href="#">投诉建议</a></li></p>
+<p>​          </ul></p>
+<p>​        </div></p>
+<pre><code>            &lt;div class=&quot;footer-column&quot;&gt;
+</code></pre>
+<p>​          <h3>商务合作</h3></p>
+<p>​          <ul></p>
+<p>​            <li><a href="#">供应商合作</a></li></p>
+<p>​            <li><a href="#">品牌合作</a></li></p>
+<p>​            <li><a href="#">广告合作</a></li></p>
+<p>​            <li><a href="#">加盟代理</a></li></p>
+<p>​          </ul></p>
+<p>​        </div></p>
+<pre><code>            &lt;div class=&quot;footer-column&quot;&gt;
+</code></pre>
+<p>​          <h3>关注我们</h3></p>
+<p>​          <ul></p>
+<p>​            <li><a href="#">微信公众号</a></li></p>
+<p>​            <li><a href="#">官方微博</a></li></p>
+<p>​            <li><a href="#">抖音账号</a></li></p>
+<p>​            <li><a href="#">小红书</a></li></p>
+<p>​          </ul></p>
+<p>​        </div></p>
+<p>​      </div></p>
+<pre><code>        &lt;div class=&quot;footer-bottom&quot;&gt;
+
+            &lt;p&gt;© 2025 小兔鲜儿 版权所有 | 营业执照 | 食品经营许可证 | 增值电信业务经营许可证&lt;/p&gt;
+</code></pre>
+<p>​      </div></p>
+<p>​    </div></p>
+  </footer>
+
+  
+
+<pre><code>&lt;script&gt;
+</code></pre>
+<p>​    &#x2F;&#x2F; 轮播图自动切换功能</p>
+<p>​    const bannerImages &#x3D; [</p>
+<p>​      ‘<a target="_blank" rel="noopener" href="https://picsum.photos/1200/400?random=1">https://picsum.photos/1200/400?random=1</a>‘,</p>
+<p>​      ‘<a target="_blank" rel="noopener" href="https://picsum.photos/1200/400?random=2">https://picsum.photos/1200/400?random=2</a>‘,</p>
+<p>​      ‘<a target="_blank" rel="noopener" href="https://picsum.photos/1200/400?random=3">https://picsum.photos/1200/400?random=3</a>‘</p>
+<p>​    ];</p>
+<p>​    </p>
+<p>​    &#x2F;&#x2F; 防止页面未完全加载时执行脚本</p>
+<p>​    document.addEventListener(‘DOMContentLoaded’, () &#x3D;&gt; {</p>
+<p>​    </p>
+<p>​    let currentBannerIndex &#x3D; 0;</p>
+<p>​    const bannerImg &#x3D; document.querySelector(‘.banner img’);</p>
+<p>​    </p>
+<p>​    function changeBanner() {</p>
+<p>​      currentBannerIndex &#x3D; (currentBannerIndex + 1) % bannerImages.length;</p>
+<p>​      bannerImg.style.opacity &#x3D; ‘0’;</p>
+<p>​      </p>
+<p>​      setTimeout(() &#x3D;&gt; {</p>
+<p>​        bannerImg.src &#x3D; bannerImages[currentBannerIndex];</p>
+<p>​        bannerImg.style.opacity &#x3D; ‘1’;</p>
+<p>​      }, 300);</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    &#x2F;&#x2F; 设置轮播图过渡效果</p>
+<p>​    bannerImg.style.transition &#x3D; ‘opacity 0.3s ease-in-out’;</p>
+<p>​    </p>
+<p>​    &#x2F;&#x2F; 每3秒切换一次轮播图</p>
+<p>​    let bannerInterval &#x3D; setInterval(changeBanner, 3000);</p>
+<p>​    </p>
+<p>​    &#x2F;&#x2F; 鼠标悬停时暂停轮播</p>
+<p>​    bannerImg.addEventListener(‘mouseenter’, () &#x3D;&gt; {</p>
+<p>​      clearInterval(bannerInterval);</p>
+<p>​    });</p>
+<p>​    </p>
+<p>​    &#x2F;&#x2F; 鼠标离开时继续轮播</p>
+<p>​    bannerImg.addEventListener(‘mouseleave’, () &#x3D;&gt; {</p>
+<p>​      bannerInterval &#x3D; setInterval(changeBanner, 3000);</p>
+<p>​    });</p>
+<p>​    </p>
+<p>​    &#x2F;&#x2F; 商品点击添加到购物车的交互</p>
+<p>​    const productItems &#x3D; document.querySelectorAll(‘.product-item’);</p>
+<p>​    const cartCount &#x3D; document.querySelector(‘.cart-count’);</p>
+<p>​    </p>
+<p>​    productItems.forEach(item &#x3D;&gt; {</p>
+<p>​      item.addEventListener(‘click’, () &#x3D;&gt; {</p>
+<p>​        &#x2F;&#x2F; 获取商品信息</p>
+<p>​        const title &#x3D; item.querySelector(‘.product-title’).textContent;</p>
+<p>​        const price &#x3D; item.querySelector(‘.product-price’).textContent;</p>
+<p>​        </p>
+<p>​        &#x2F;&#x2F; 更新购物车数量</p>
+<p>​        let count &#x3D; parseInt(cartCount.textContent);</p>
+<p>​        cartCount.textContent &#x3D; count + 1;</p>
+<p>​        </p>
+<p>​        &#x2F;&#x2F; 显示添加成功提示</p>
+<p>​        showToast(<code>已将「$&#123;title.substring(0, 10)&#125;...」添加到购物车</code>);</p>
+<p>​        </p>
+<p>​        &#x2F;&#x2F; 添加点击动画</p>
+<p>​        item.style.transform &#x3D; ‘scale(0.95)’;</p>
+<p>​        setTimeout(() &#x3D;&gt; {</p>
+<p>​          item.style.transform &#x3D; ‘scale(1) translateY(-5px)’;</p>
+<p>​        }, 100);</p>
+<p>​      });</p>
+<p>​    });</p>
+<p>​    </p>
+<p>​    &#x2F;&#x2F; 购物车点击效果</p>
+<p>​    const cart &#x3D; document.querySelector(‘.cart’);</p>
+<p>​    cart.addEventListener(‘click’, () &#x3D;&gt; {</p>
+<p>​      cart.style.transform &#x3D; ‘scale(1.1)’;</p>
+<p>​      setTimeout(() &#x3D;&gt; {</p>
+<p>​        cart.style.transform &#x3D; ‘scale(1)’;</p>
+<p>​      }, 150);</p>
+<p>​      alert(‘购物车功能即将上线，敬请期待！’);</p>
+<p>​    });</p>
+<p>​    </p>
+<p>​    &#x2F;&#x2F; 搜索按钮点击效果</p>
+<p>​    const searchButton &#x3D; document.querySelector(‘.search button’);</p>
+<p>​    const searchInput &#x3D; document.querySelector(‘.search input’);</p>
+<p>​    </p>
+<p>​    searchButton.addEventListener(‘click’, () &#x3D;&gt; {</p>
+<p>​      const keyword &#x3D; searchInput.value.trim();</p>
+<p>​      if (keyword) {</p>
+<p>​        alert(<code>正在搜索：$&#123;keyword&#125;</code>);</p>
+<p>​      } else {</p>
+<p>​        alert(‘请输入搜索关键词’);</p>
+<p>​      }</p>
+<p>​    });</p>
+<p>​    </p>
+<p>​    &#x2F;&#x2F; 回车键搜索</p>
+<p>​    searchInput.addEventListener(‘keyup’, (e) &#x3D;&gt; {</p>
+<p>​      if (e.key &#x3D;&#x3D;&#x3D; ‘Enter’) {</p>
+<p>​        searchButton.click();</p>
+<p>​      }</p>
+<p>​    });</p>
+<p>​    </p>
+<p>​    &#x2F;&#x2F; 导航栏滚动效果</p>
+<p>​    const mainNav &#x3D; document.querySelector(‘.main-nav’);</p>
+<p>​    let lastScrollY &#x3D; window.scrollY;</p>
+<p>​    </p>
+<p>​    window.addEventListener(‘scroll’, () &#x3D;&gt; {</p>
+<p>​      if (window.scrollY &gt; 100) {</p>
+<p>​        mainNav.style.boxShadow &#x3D; ‘0 4px 20px rgba(0,0,0,0.15)’;</p>
+<p>​        mainNav.style.padding &#x3D; ‘10px 0’;</p>
+<p>​        mainNav.style.transition &#x3D; ‘all 0.3s ease’;</p>
+<p>​      } else {</p>
+<p>​        mainNav.style.boxShadow &#x3D; ‘0 2px 10px rgba(0,0,0,0.1)’;</p>
+<p>​        mainNav.style.padding &#x3D; ‘20px 0’;</p>
+<p>​      }</p>
+<p>​      </p>
+<p>​      &#x2F;&#x2F; 隐藏&#x2F;显示导航栏</p>
+<p>​      if (window.scrollY &gt; lastScrollY &amp;&amp; window.scrollY &gt; 300) {</p>
+<p>​        mainNav.style.transform &#x3D; ‘translateY(-100%)’;</p>
+<p>​      } else {</p>
+<p>​        mainNav.style.transform &#x3D; ‘translateY(0)’;</p>
+<p>​      }</p>
+<p>​      </p>
+<p>​      lastScrollY &#x3D; window.scrollY;</p>
+<p>​    });</p>
+<p>​    </p>
+<p>​    &#x2F;&#x2F; 简单的Toast提示函数</p>
+<p>​    function showToast(message) {</p>
+<p>​      &#x2F;&#x2F; 检查是否已存在toast元素</p>
+<p>​      let toast &#x3D; document.querySelector(‘.toast’);</p>
+<p>​      if (toast) {</p>
+<p>​        toast.remove();</p>
+<p>​      }</p>
+<p>​      </p>
+<p>​      &#x2F;&#x2F; 创建新的toast元素</p>
+<p>​      toast &#x3D; document.createElement(‘div’);</p>
+<p>​      toast.className &#x3D; ‘toast’;</p>
+<p>​      toast.textContent &#x3D; message;</p>
+<p>​      </p>
+<p>​      &#x2F;&#x2F; 设置toast样式</p>
+<p>​      Object.assign(toast.style, {</p>
+<p>​        position: ‘fixed’,</p>
+<p>​        top: ‘80px’,</p>
+<p>​        left: ‘50%’,</p>
+<p>​        transform: ‘translateX(-50%)’,</p>
+<p>​        background: ‘rgba(0, 0, 0, 0.7)’,</p>
+<p>​        color: ‘white’,</p>
+<p>​        padding: ‘12px 24px’,</p>
+<p>​        borderRadius: ‘4px’,</p>
+<p>​        zIndex: ‘9999’,</p>
+<p>​        fontSize: ‘14px’,</p>
+<p>​        opacity: ‘0’,</p>
+<p>​        transition: ‘opacity 0.3s ease’</p>
+<p>​      });</p>
+<p>​      </p>
+<p>​      &#x2F;&#x2F; 添加到页面</p>
+<p>​      document.body.appendChild(toast);</p>
+<p>​      </p>
+<p>​      &#x2F;&#x2F; 显示toast</p>
+<p>​      setTimeout(() &#x3D;&gt; {</p>
+<p>​        toast.style.opacity &#x3D; ‘1’;</p>
+<p>​      }, 10);</p>
+<p>​      </p>
+<p>​      &#x2F;&#x2F; 3秒后隐藏</p>
+<p>​      setTimeout(() &#x3D;&gt; {</p>
+<p>​        toast.style.opacity &#x3D; ‘0’;</p>
+<p>​        setTimeout(() &#x3D;&gt; {</p>
+<p>​          toast.remove();</p>
+<p>​        }, 300);</p>
+<p>​      }, 3000);</p>
+<p>​    }</p>
+<p>​    </p>
+<p>​    &#x2F;&#x2F; 为分类导航添加悬停效果</p>
+<p>​    const categoryItems &#x3D; document.querySelectorAll(‘.category-menu li’);</p>
+<p>​    categoryItems.forEach(item &#x3D;&gt; {</p>
+<p>​      item.addEventListener(‘mouseenter’, () &#x3D;&gt; {</p>
+<p>​        item.style.transform &#x3D; ‘translateY(-3px)’;</p>
+<p>​        item.style.transition &#x3D; ‘transform 0.3s ease’;</p>
+<p>​      });</p>
+<p>​      </p>
+<p>​      item.addEventListener(‘mouseleave’, () &#x3D;&gt; {</p>
+<p>​        item.style.transform &#x3D; ‘translateY(0)’;</p>
+<p>​      });</p>
+<p>​    });</p>
+<p>​    </p>
+<p>​    &#x2F;&#x2F; 品牌区域的交互效果</p>
+<p>​    const brandItems &#x3D; document.querySelectorAll(‘.brand-item’);</p>
+<p>​    brandItems.forEach(item &#x3D;&gt; {</p>
+<p>​      item.addEventListener(‘click’, () &#x3D;&gt; {</p>
+<p>​        item.style.transform &#x3D; ‘scale(1.05)’;</p>
+<p>​        setTimeout(() &#x3D;&gt; {</p>
+<p>​          item.style.transform &#x3D; ‘scale(1) translateY(-5px)’;</p>
+<p>​        }, 100);</p>
+<p>​        </p>
+<p>​        const brandName &#x3D; item.querySelector(‘div’).textContent;</p>
+<p>​        alert(<code>您点击了 $&#123;brandName&#125;</code>);</p>
+<p>​      });</p>
+<p>​    });</p>
+<p>​    </p>
+<p>​    &#x2F;&#x2F; 页面加载完成后的动画效果</p>
+<p>​    window.addEventListener(‘load’, () &#x3D;&gt; {</p>
+<p>​      &#x2F;&#x2F; 页面淡入效果</p>
+<p>​      document.body.style.opacity &#x3D; ‘0’;</p>
+<p>​      document.body.style.transition &#x3D; ‘opacity 0.5s ease’;</p>
+<p>​      setTimeout(() &#x3D;&gt; {</p>
+<p>​        document.body.style.opacity &#x3D; ‘1’;</p>
+<p>​      }, 100);</p>
+<p>​      </p>
+<p>​      &#x2F;&#x2F; 商品卡片依次显示</p>
+<p>​      const productCards &#x3D; document.querySelectorAll(‘.product-item’);</p>
+<p>​      productCards.forEach((card, index) &#x3D;&gt; {</p>
+<p>​        card.style.opacity &#x3D; ‘0’;</p>
+<p>​        card.style.transform &#x3D; ‘translateY(20px)’;</p>
+<p>​        card.style.transition &#x3D; ‘all 0.5s ease’;</p>
+<p>​        </p>
+<p>​        setTimeout(() &#x3D;&gt; {</p>
+<p>​          card.style.opacity &#x3D; ‘1’;</p>
+<p>​          card.style.transform &#x3D; ‘translateY(0)’;</p>
+<p>​        }, 100 + index * 100);</p>
+<p>​      });</p>
+<p>​    });</p>
+<p>​    });</p>
+<p>  </script></p>
+</body>
+
+</html>
+
+      </div>
+        <div class="support-author">
+          <p>感谢您的阅读。 🙏
+          <a href="https://888.com/index.html" target="_blank">关于转载请看这里</a>
+            <!--<a class="btn-pay"  href="#pay-modal">¥ 打赏支持</a>-->
+          </p>
+        </div>
+        <!--
+            <div class="like ">
+              <div class="like-button">
+                <a id="like-note" href="">
+                  <i class="icon-heart"></i>喜欢
+                </a>
+              </div>
+              <span id="likes-count">256</span>
+            </div>
+        -->
+        <div class="otherLink">
+          <div class="previous">
+          </div>
+          <div class="next">
+          </div>
+        </div>
+        <div class="comments" id="comments">
+          
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  const gitalk = new Gitalk({
+    clientID: '8888a8888',
+    clientSecret: '8888886666666',
+    repo: 'xxxx.github.io',
+    owner: 'admin',
+    admin: ['admin'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false
+  })
+
+  gitalk.render('comments');
+</script>
+
+
+        </div>
+      </div>
+    </div>
+   </div>
+</main>
+<div class="footer">
+  <div class="info">
+    <p>
+    <a target="_blank" rel="noopener" href="https://hexo.io"> Hexo </a> 强力驱动 |
+      <a target="_blank" rel="noopener" href="https://github.com/Youthink/hexo-themes-yearn"> Yearn </a>
+      主题
+    </p>
+    <p>&copy;2024-2077 99mts的博客</p>
+  </div>
+</div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script>//console
+  var consoleConfig = '\n欢迎访问 https://hufangyun.com ，围观小猿大圣的博客(づ｡◕‿‿◕｡)づ！\n,\n本博客使用 %cHexo%c 搭建，博客主题为小猿大圣开发的 %chexo-themes-yearn%c ~~~ 🎉🎉🎉 \n\n源码 https://github.com/Youthink/hexo-themes-yearn \n\n如果喜欢可以 star 支持一下 ❤️~\n,\n扫描下面的二维码，在手机上查看博客！\n,https://static.hufangyun.com/blog-url-qrcode-180-180.png,\n 想知道这个效果如何实现的？博客内搜索 console 彩蛋 🚀 ！\n'.split(',');
+  var canConsole = true;
+  var consoleInfo = (function(consoleConfig) {
+  if (!canConsole || !consoleConfig || consoleConfig.length < 1) {
+    return;
+  }
+  var consoleColor = '#6190e8';
+  var _console;
+  var backgroundTextStyle = 'padding: 1px 5px;color: #fff;background: ' + consoleColor + ';'
+  var textStyle = 'color: ' + consoleColor + ';';
+
+  consoleConfig.map(o => {
+    var num = (o.match(/%c/g) || []).length;
+    if(/^http(s)?:\/\//.test(o)) {
+      console.log('%c     ', 'background: url(' + o + ') no-repeat left center;font-size: 180px;');
+      return;
+    }
+    if (num > 0) {
+      var logArguments = [];
+      for (var i = 0; i < num; i++) {
+        if (i % 2 === 0) {
+          logArguments.push(backgroundTextStyle);
+        } else {
+          logArguments.push(textStyle);
+        }
+      }
+      (_console = console).log.apply(_console, ['%c' + o, textStyle].concat(logArguments));
+      return;
+    }
+    console.log('%c' + o, textStyle);
+  });
+}(consoleConfig));</script><script type="text/javascript" src="/./js/main.d9e3dd.js"></script>
+
+</body>
+</html>
