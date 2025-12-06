@@ -59,7 +59,7 @@
       </li>
       <li>
         
-    更新 <time datetime="2024-12-13T13:35:49.933Z" itemprop="dateUpdated">2024-12-13</time>
+    更新 <time datetime="2025-12-06T07:07:51.230Z" itemprop="dateUpdated">2025-12-06</time>
 
       </li>
       <li id="busuanzi_container_page_pv">
@@ -80,16 +80,31 @@
 <p>Error: Spawn failed<br>at ChildProcess.<anonymous>  (D:\StudyMaterials\8_FileManagement\testBlog\blog\node_modules\hexo-util\lib\spawn.js:51:21)<br>atChildProcess.emit(events.js:314:20)atChildProcess.cp.emit(D:\StudyMaterials\8_FileManagement\testBlog\blog\node_modules\crossspawn\lib\enoent.js:34:29)atProcess.ChildProcess._handle.onexit (internal&#x2F;child_process.js:275:12)</p>
 <p>此时可以打开config.yml配置文件,</p>
 <p>将repo: <a target="_blank" rel="noopener" href="https://github.com/yourname/yourname.github.io.git">https://github.com/yourname/yourname.github.io.git</a></p>
-<p>改为repo: <a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#105;&#116;&#x68;&#117;&#x62;&#x2e;&#x63;&#111;&#109;">&#103;&#105;&#x74;&#64;&#x67;&#105;&#116;&#x68;&#117;&#x62;&#x2e;&#x63;&#111;&#109;</a>:yourname&#x2F;yourname.github.io.git</p>
+<p>改为repo: <a href="mailto:&#103;&#x69;&#116;&#x40;&#x67;&#x69;&#116;&#104;&#x75;&#98;&#46;&#99;&#111;&#x6d;">&#103;&#x69;&#116;&#x40;&#x67;&#x69;&#116;&#104;&#x75;&#98;&#46;&#99;&#111;&#x6d;</a>:yourname&#x2F;yourname.github.io.git</p>
 <p>即把网址中的</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a></p>
 <p>改为</p>
-<p><a href="mailto:&#x67;&#105;&#116;&#x40;&#103;&#x69;&#116;&#104;&#x75;&#x62;&#x2e;&#99;&#111;&#109;">&#x67;&#105;&#116;&#x40;&#103;&#x69;&#116;&#104;&#x75;&#x62;&#x2e;&#99;&#111;&#109;</a>:</p>
+<p><a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#x69;&#116;&#x68;&#117;&#98;&#x2e;&#x63;&#111;&#x6d;">&#103;&#105;&#x74;&#64;&#103;&#x69;&#116;&#x68;&#117;&#98;&#x2e;&#x63;&#111;&#x6d;</a>:</p>
 <p>就可以了（注意不要漏了 <em>斜杠</em> 和 <strong>冒号</strong> ）</p>
 <h3 id="4-其他问题"><a href="#4-其他问题" class="headerlink" title="4.其他问题"></a><strong>4.其他问题</strong></h3><p> 1） ： （md文档中 ）冒号后面要有一个空格。</p>
 <p> 2） 如果使用hexo init命令时，返回一个bash: hexo: command not found。只需将命令hexo init改为npx hexo init即可。</p>
 <p> 3） 在使用hexo时不要用快捷键，Ctrl+C在 hexo里面的意思是停止运行，不是复制。</p>
 <p> 4）打开md文档之后最好不要动那个<strong>tags：</strong>，因为我动了之后出现了奇怪的问题。</p>
+<h2 id="5-如何上传文章（补充）"><a href="#5-如何上传文章（补充）" class="headerlink" title="5.如何上传文章（补充）"></a>5.如何上传文章（补充）</h2><p>我们在Blog文件夹中打开git bash,输入下方代码就可以生成新的文章md文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new 文章标题</span><br></pre></td></tr></table></figure>
+
+<p>文章是.md格式，在我们的Blog文件夹中的source&#x2F;_posts中</p>
+<p>推荐用Typora软件来编辑.md格式的文件</p>
+<blockquote>
+<p>Typora官网：<a target="_blank" rel="noopener" href="https://www.typoraio.cn/%EF%BC%8889%E5%85%83%E7%BB%88%E8%BA%AB%E4%BD%BF%E7%94%A8%EF%BC%8C%E6%8E%A8%E8%8D%90%E6%AD%A3%E7%89%88%EF%BC%89">https://www.typoraio.cn/（89元终身使用，推荐正版）</a></p>
+<p>破解版奉上：<a target="_blank" rel="noopener" href="https://kevinwu06.lanzout.com/iXkq30icv1ha">蓝奏云文件</a></p>
+</blockquote>
+<p>然后我们用Typora软件打开该.md文件就可以开始写文章了</p>
+<p>写好以后，我们还是一样打开git bash生成、上传</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>至此，我们就成功搭建好基本的博客了，剩下的就是对博客的一些优化和美化了。</p>
 
       </div>
         <div class="support-author">
