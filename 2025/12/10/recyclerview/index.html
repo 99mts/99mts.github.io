@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="keywords" content="hexo,个人博客,blog" />
+  <meta name="description" content="99mts的个人博客" />
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+  
+  <link rel="dns-prefetch" href="https://widget.daovoice.io">
+  <link rel="dns-prefetch" href="https://widget-static-cdn.daovoice.io">
+  <link rel="dns-prefetch" href="https://im.daovoice.io">
+  
+  
+  <link rel="dns-prefetch" href="https://hm.baidu.com/">
+  
+  
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://api.github.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  
+  <link rel="stylesheet" type="text/css" href="/./style/main.d9e3dd.css">
+	<link rel="shortcut icon" href="/favicon.ico" title="Favicon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<title>recyclerview</title>
+  
+  <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?awwssw1snsnsnn1ndndnndnd99j";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();
+  </script>
+  
+  
+    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/123456.js","daovoice");daovoice('init',{app_id: "123456"});daovoice('update');
+  </script>
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+<canvas id="pattern-placeholder" height="230"></canvas>
+<div class="navbar-header">
+  <a class="blog-title" href="/">MTS的blog</a>
+  <a class="face-img" href="/">
+    <img src="https://ods2.oddba.cn/user_files/74063/publish/post/95278945_1673715466.jpeg">
+  </a>
+</div>
+<main>
+  <div class="article-title">
+    
+  
+  <h1 class="title">
+    recyclerview
+  </h1>
+  
+
+
+    <ul class="article-info">
+      <li>
+        发布
+        <time datetime="2025-12-10T13:40:06.000Z" itemprop="datePublished">2025-12-10</time>
+      </li>
+      <li>
+        
+    更新 <time datetime="2025-12-10T13:56:47.771Z" itemprop="dateUpdated">2025-12-10</time>
+
+      </li>
+      <li id="busuanzi_container_page_pv">
+        阅读 <span id="busuanzi_value_page_pv"></span>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="article">
+      <div class="content">
+        
+        <p>0</p>
+<h1 id="RecyclerView-的组成结构如下："><a href="#RecyclerView-的组成结构如下：" class="headerlink" title="RecyclerView 的组成结构如下："></a>RecyclerView 的组成结构如下：</h1><h2 id="主要组成部分"><a href="#主要组成部分" class="headerlink" title="主要组成部分"></a>主要组成部分</h2><ol>
+<li><h3 id="布局文件-activity-recyclerview-xml"><a href="#布局文件-activity-recyclerview-xml" class="headerlink" title="布局文件 (activity_recyclerview.xml)"></a>布局文件 (activity_recyclerview.xml)</h3><p>包含一个 RecyclerView 组件，占据整个屏幕<br>使用 ConstraintLayout 作为根容器<br>通过约束将 recyclerView 固定到父容器的四周边缘</p>
+</li>
+<li><h3 id="数据模型-Item-类"><a href="#数据模型-Item-类" class="headerlink" title="数据模型 (Item 类)"></a>数据模型 (Item 类)</h3><p>定义在 RRecyclerView.kt 中的 data class<br>包含两个属性：title (标题) 和 description (描述)</p>
+</li>
+<li><h3 id="适配器-ItemAdapter"><a href="#适配器-ItemAdapter" class="headerlink" title="适配器 (ItemAdapter)"></a>适配器 (ItemAdapter)</h3><p>继承自 RecyclerView.Adapter<br>包含 ItemViewHolder 内部类用于持有列表项视图<br>实现三个关键方法：<br>onCreateViewHolder: 创建列表项视图<br>onBindViewHolder: 绑定数据到视图<br>getItemCount: 返回数据项总数</p>
+<p>这种结构是 Android 开发中 RecyclerView.Adapter 的标准模板，适用于大多数简单列表展示场景。</p>
+<h3 id="标准实现模式"><a href="#标准实现模式" class="headerlink" title="标准实现模式"></a>标准实现模式</h3><p>ViewHolder 类：ItemViewHolder 内部类继承 RecyclerView.ViewHolder通过 findViewById 获取列表项中视图组件<br>三个核心方法重写：</p>
+<p>onCreateViewHolder：创建并返回 ViewHolder 实例</p>
+<p>onBindViewHolder：绑定数据到 ViewHolder<br>getItemCount：返回数据集合大小</p>
+</li>
+<li><h3 id="列表项布局-item-layout-xml"><a href="#列表项布局-item-layout-xml" class="headerlink" title="列表项布局 (item_layout.xml)"></a>列表项布局 (item_layout.xml)</h3><p>使用垂直 LinearLayout 排列<br>包含两个 TextView 分别显示标题和描述<br>设置了适当的内边距和文字样式</p>
+</li>
+<li><h3 id="Activity-实现-RRecyclerView"><a href="#Activity-实现-RRecyclerView" class="headerlink" title="Activity 实现 (RRecyclerView)"></a>Activity 实现 (RRecyclerView)</h3><p>初始化 RecyclerView 并设置布局管理器<br>添加分割线装饰器改善视觉效果<br>创建数据列表并设置适配器<br>使用 setHasFixedSize(true) 优化性能<br>这五个部分协同工作，构成了完整的 RecyclerView 显示系统。</p>
+</li>
+</ol>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><h3 id="代码结构"><a href="#代码结构" class="headerlink" title="代码结构"></a>代码结构</h3><p><img src="C:\Users\m't's\AppData\Roaming\Typora\typora-user-images\image-20251210214458991.png" alt="image-20251210214458991"></p>
+<h3 id="代码源码"><a href="#代码源码" class="headerlink" title="代码源码"></a>代码源码</h3><h5 id="ItemAdapter-kt"><a href="#ItemAdapter-kt" class="headerlink" title="ItemAdapter.kt"></a>ItemAdapter.kt</h5><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.newlearn.recyclerview</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.view.LayoutInflater</span><br><span class="line"><span class="keyword">import</span> android.view.View</span><br><span class="line"><span class="keyword">import</span> android.view.ViewGroup</span><br><span class="line"><span class="keyword">import</span> android.widget.TextView</span><br><span class="line"><span class="keyword">import</span> androidx.recyclerview.widget.RecyclerView</span><br><span class="line"><span class="keyword">import</span> com.example.newlearn.R</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * RecyclerView的适配器类，用于显示Item列表</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> items 要显示的Item数据列表</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ItemAdapter</span>(<span class="keyword">private</span> <span class="keyword">val</span> items: List&lt;Item&gt;) : RecyclerView.Adapter&lt;ItemAdapter.ItemViewHolder&gt;() &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * ViewHolder类，用于持有RecyclerView中每个item的视图引用</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> itemView 单个item的根视图</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">ItemViewHolder</span>(itemView: View) : RecyclerView.ViewHolder(itemView) &#123;</span><br><span class="line">        <span class="keyword">val</span> titleText: TextView = itemView.findViewById(R.id.titleText)</span><br><span class="line">        <span class="keyword">val</span> descriptionText: TextView = itemView.findViewById(R.id.descriptionText)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 创建ViewHolder实例</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> parent 父容器ViewGroup</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> viewType 视图类型</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 返回创建的ItemViewHolder实例</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreateViewHolder</span><span class="params">(parent: <span class="type">ViewGroup</span>, viewType: <span class="type">Int</span>)</span></span>: ItemViewHolder &#123;</span><br><span class="line">        <span class="keyword">val</span> view = LayoutInflater.from(parent.context)</span><br><span class="line">            .inflate(R.layout.item_layout, parent, <span class="literal">false</span>)</span><br><span class="line">        <span class="keyword">return</span> ItemViewHolder(view)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 绑定数据到ViewHolder</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> holder 要绑定数据的ViewHolder</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> position 当前item在列表中的位置</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onBindViewHolder</span><span class="params">(holder: <span class="type">ItemViewHolder</span>, position: <span class="type">Int</span>)</span></span> &#123;</span><br><span class="line">        <span class="keyword">val</span> item = items[position]</span><br><span class="line">        holder.titleText.text = item.title</span><br><span class="line">        holder.descriptionText.text = item.description</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取列表项的数量</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 返回items列表的大小</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">getItemCount</span><span class="params">()</span></span> = items.size</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="RRecyclerView-kt"><a href="#RRecyclerView-kt" class="headerlink" title="RRecyclerView.kt"></a>RRecyclerView.kt</h5><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.newlearn.recyclerview</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.os.Bundle</span><br><span class="line"><span class="keyword">import</span> androidx.activity.enableEdgeToEdge</span><br><span class="line"><span class="keyword">import</span> androidx.appcompat.app.AppCompatActivity</span><br><span class="line"><span class="keyword">import</span> androidx.core.view.ViewCompat</span><br><span class="line"><span class="keyword">import</span> androidx.core.view.WindowInsetsCompat</span><br><span class="line"><span class="keyword">import</span> androidx.recyclerview.widget.DividerItemDecoration</span><br><span class="line"><span class="keyword">import</span> com.example.newlearn.R</span><br><span class="line"><span class="keyword">import</span> androidx.recyclerview.widget.RecyclerView</span><br><span class="line"><span class="keyword">import</span> androidx.recyclerview.widget.LinearLayoutManager</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义数据模型（数据类应该单独创建一个文件放置）</span></span><br><span class="line"><span class="keyword">data</span> <span class="keyword">class</span> <span class="title class_">Item</span>(<span class="keyword">val</span> title: String, <span class="keyword">val</span> description: String)</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">RRecyclerView</span> : <span class="type">AppCompatActivity</span>() &#123;</span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreate</span><span class="params">(savedInstanceState: <span class="type">Bundle</span>?)</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState)</span><br><span class="line">        enableEdgeToEdge()</span><br><span class="line">        setContentView(R.layout.activity_recyclerview)</span><br><span class="line">        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) &#123; v, insets -&gt;</span><br><span class="line">            <span class="keyword">val</span> systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())</span><br><span class="line">            v.setPadding(systemBars.left, systemBars.top,</span><br><span class="line">                         systemBars.right, systemBars.bottom)</span><br><span class="line">                                                                            </span><br><span class="line">            insets</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 初始化 RecyclerView</span></span><br><span class="line">        <span class="keyword">val</span> recyclerView = findViewById&lt;RecyclerView&gt;(R.id.recyclerView)</span><br><span class="line">        recyclerView.layoutManager = LinearLayoutManager(<span class="keyword">this</span>)</span><br><span class="line">        recyclerView.setHasFixedSize(<span class="literal">true</span>)  <span class="comment">// 添加此行提升性能</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 在设置适配器之前添加分割线</span></span><br><span class="line">        <span class="keyword">val</span> dividerItemDecoration = DividerItemDecoration(</span><br><span class="line">            recyclerView.context,</span><br><span class="line">            LinearLayoutManager(<span class="keyword">this</span>).orientation</span><br><span class="line">        )</span><br><span class="line">        recyclerView.addItemDecoration(dividerItemDecoration)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 准备数据</span></span><br><span class="line">        <span class="keyword">val</span> items = listOf(</span><br><span class="line">            Item(<span class="string">&quot;明日方舟&quot;</span>, <span class="string">&quot;塔防类手机游戏，融合策略战斗与角色收集养成要素&quot;</span>),</span><br><span class="line">            Item(<span class="string">&quot;命运石之门&quot;</span>, <span class="string">&quot;科幻题材视觉⼩说游戏，围绕时间旅行和世界线变动展开复杂剧情&quot;</span>),</span><br><span class="line">            Item(<span class="string">&quot;深岩银河&quot;</span>, <span class="string">&quot;合作式第一人称射击游戏，四名矮人矿工深入外星星球洞穴探险&quot;</span>),</span><br><span class="line">            Item(<span class="string">&quot;死亡循环&quot;</span>, <span class="string">&quot;科幻题材的第一人称射击游戏，玩家陷入时间循环中不断重复同一天&quot;</span>),</span><br><span class="line">            Item(<span class="string">&quot;耻辱&quot;</span>, <span class="string">&quot;以暗杀和潜行为核心的第一人称动作冒险游戏，具有丰富的超自然能力系统&quot;</span>),</span><br><span class="line">            Item(<span class="string">&quot;Ori&quot;</span>, <span class="string">&quot;精美的手绘风格平台跳跃游戏，讲述小精灵Ori的成长与冒险故事&quot;</span>),</span><br><span class="line">            )</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置适配器</span></span><br><span class="line">        <span class="keyword">val</span> adapter = ItemAdapter(items)</span><br><span class="line">        recyclerView.adapter = adapter</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="activity-recyclerview-xml"><a href="#activity-recyclerview-xml" class="headerlink" title="activity_recyclerview.xml"></a>activity_recyclerview.xml</h5><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">androidx.constraintlayout.widget.ConstraintLayout</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:app</span>=<span class="string">&quot;http://schemas.android.com/apk/res-auto&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:tools</span>=<span class="string">&quot;http://schemas.android.com/tools&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">&quot;@+id/main&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">tools:context</span>=<span class="string">&quot;.recyclerview.RRecyclerView&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">androidx.recyclerview.widget.RecyclerView</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/recyclerView&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">app:layout_constraintBottom_toBottomOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">app:layout_constraintEnd_toEndOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">app:layout_constraintStart_toStartOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">app:layout_constraintTop_toTopOf</span>=<span class="string">&quot;parent&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">androidx.constraintlayout.widget.ConstraintLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="item-layout-xml"><a href="#item-layout-xml" class="headerlink" title="item_layout.xml"></a>item_layout.xml</h5><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:orientation</span>=<span class="string">&quot;vertical&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:padding</span>=<span class="string">&quot;16dp&quot;</span></span></span><br><span class="line"><span class="tag">    &gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/titleText&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textSize</span>=<span class="string">&quot;18sp&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textStyle</span>=<span class="string">&quot;bold&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/descriptionText&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textSize</span>=<span class="string">&quot;14sp&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">implementation(&quot;androidx.recyclerview:recyclerview:1.3.2&quot;)</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>遇到的问题，应该添加import的地方IDE没有完全提示（只红无线）</p>
+<img src="C:\Users\m't's\AppData\Roaming\Typora\typora-user-images\image-20251210210132596.png" alt="image-20251210210132596"  />
+
+<p>   |</p>
+<p>  ||</p>
+<p>\    &#x2F;</p>
+<p>  /</p>
+<p><img src="C:\Users\m't's\AppData\Roaming\Typora\typora-user-images\image-20251210215114433.png" alt="image-20251210215114433"></p>
+
+      </div>
+        <div class="support-author">
+          <p>感谢您的阅读。 🙏
+          <a href="https://888.com/index.html" target="_blank">关于转载请看这里</a>
+            <!--<a class="btn-pay"  href="#pay-modal">¥ 打赏支持</a>-->
+          </p>
+        </div>
+        <!--
+            <div class="like ">
+              <div class="like-button">
+                <a id="like-note" href="">
+                  <i class="icon-heart"></i>喜欢
+                </a>
+              </div>
+              <span id="likes-count">256</span>
+            </div>
+        -->
+        <div class="otherLink">
+          <div class="previous">
+          </div>
+          <div class="next">
+          </div>
+        </div>
+        <div class="comments" id="comments">
+          
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  const gitalk = new Gitalk({
+    clientID: '8888a8888',
+    clientSecret: '8888886666666',
+    repo: 'xxxx.github.io',
+    owner: 'admin',
+    admin: ['admin'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false
+  })
+
+  gitalk.render('comments');
+</script>
+
+
+        </div>
+      </div>
+    </div>
+   </div>
+</main>
+<div class="footer">
+  <div class="info">
+    <p>
+    <a target="_blank" rel="noopener" href="https://hexo.io"> Hexo </a> 强力驱动 |
+      <a target="_blank" rel="noopener" href="https://github.com/Youthink/hexo-themes-yearn"> Yearn </a>
+      主题
+    </p>
+    <p>&copy;2024-2077 99mts的博客</p>
+  </div>
+</div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script>//console
+  var consoleConfig = '\n欢迎访问 https://hufangyun.com ，围观小猿大圣的博客(づ｡◕‿‿◕｡)づ！\n,\n本博客使用 %cHexo%c 搭建，博客主题为小猿大圣开发的 %chexo-themes-yearn%c ~~~ 🎉🎉🎉 \n\n源码 https://github.com/Youthink/hexo-themes-yearn \n\n如果喜欢可以 star 支持一下 ❤️~\n,\n扫描下面的二维码，在手机上查看博客！\n,https://static.hufangyun.com/blog-url-qrcode-180-180.png,\n 想知道这个效果如何实现的？博客内搜索 console 彩蛋 🚀 ！\n'.split(',');
+  var canConsole = true;
+  var consoleInfo = (function(consoleConfig) {
+  if (!canConsole || !consoleConfig || consoleConfig.length < 1) {
+    return;
+  }
+  var consoleColor = '#6190e8';
+  var _console;
+  var backgroundTextStyle = 'padding: 1px 5px;color: #fff;background: ' + consoleColor + ';'
+  var textStyle = 'color: ' + consoleColor + ';';
+
+  consoleConfig.map(o => {
+    var num = (o.match(/%c/g) || []).length;
+    if(/^http(s)?:\/\//.test(o)) {
+      console.log('%c     ', 'background: url(' + o + ') no-repeat left center;font-size: 180px;');
+      return;
+    }
+    if (num > 0) {
+      var logArguments = [];
+      for (var i = 0; i < num; i++) {
+        if (i % 2 === 0) {
+          logArguments.push(backgroundTextStyle);
+        } else {
+          logArguments.push(textStyle);
+        }
+      }
+      (_console = console).log.apply(_console, ['%c' + o, textStyle].concat(logArguments));
+      return;
+    }
+    console.log('%c' + o, textStyle);
+  });
+}(consoleConfig));</script><script type="text/javascript" src="/./js/main.d9e3dd.js"></script>
+
+</body>
+</html>
