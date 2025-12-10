@@ -24,7 +24,7 @@
   <link rel="stylesheet" type="text/css" href="/./style/main.d9e3dd.css">
 	<link rel="shortcut icon" href="/favicon.ico" title="Favicon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-	<title>recyclerview</title>
+	<title>Recyclerview</title>
   
   <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?awwssw1snsnsnn1ndndnndnd99j";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();
   </script>
@@ -47,7 +47,7 @@
     
   
   <h1 class="title">
-    recyclerview
+    Recyclerview
   </h1>
   
 
@@ -59,7 +59,7 @@
       </li>
       <li>
         
-    更新 <time datetime="2025-12-10T13:56:47.771Z" itemprop="dateUpdated">2025-12-10</time>
+    更新 <time datetime="2025-12-10T14:07:18.759Z" itemprop="dateUpdated">2025-12-10</time>
 
       </li>
       <li id="busuanzi_container_page_pv">
@@ -88,7 +88,7 @@
 <li><h3 id="Activity-实现-RRecyclerView"><a href="#Activity-实现-RRecyclerView" class="headerlink" title="Activity 实现 (RRecyclerView)"></a>Activity 实现 (RRecyclerView)</h3><p>初始化 RecyclerView 并设置布局管理器<br>添加分割线装饰器改善视觉效果<br>创建数据列表并设置适配器<br>使用 setHasFixedSize(true) 优化性能<br>这五个部分协同工作，构成了完整的 RecyclerView 显示系统。</p>
 </li>
 </ol>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><h3 id="代码结构"><a href="#代码结构" class="headerlink" title="代码结构"></a>代码结构</h3><p><img src="C:\Users\m't's\AppData\Roaming\Typora\typora-user-images\image-20251210214458991.png" alt="image-20251210214458991"></p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><h3 id="代码结构"><a href="#代码结构" class="headerlink" title="代码结构"></a>代码结构</h3><p><img src="D:\360MoveData\Users\m't's\Desktop\根节点\my.blog\source\images\image-20251210214458991.png" alt="image-20251210214458991"></p>
 <h3 id="代码源码"><a href="#代码源码" class="headerlink" title="代码源码"></a>代码源码</h3><h5 id="ItemAdapter-kt"><a href="#ItemAdapter-kt" class="headerlink" title="ItemAdapter.kt"></a>ItemAdapter.kt</h5><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.newlearn.recyclerview</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.view.LayoutInflater</span><br><span class="line"><span class="keyword">import</span> android.view.View</span><br><span class="line"><span class="keyword">import</span> android.view.ViewGroup</span><br><span class="line"><span class="keyword">import</span> android.widget.TextView</span><br><span class="line"><span class="keyword">import</span> androidx.recyclerview.widget.RecyclerView</span><br><span class="line"><span class="keyword">import</span> com.example.newlearn.R</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * RecyclerView的适配器类，用于显示Item列表</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> items 要显示的Item数据列表</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ItemAdapter</span>(<span class="keyword">private</span> <span class="keyword">val</span> items: List&lt;Item&gt;) : RecyclerView.Adapter&lt;ItemAdapter.ItemViewHolder&gt;() &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * ViewHolder类，用于持有RecyclerView中每个item的视图引用</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> itemView 单个item的根视图</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">ItemViewHolder</span>(itemView: View) : RecyclerView.ViewHolder(itemView) &#123;</span><br><span class="line">        <span class="keyword">val</span> titleText: TextView = itemView.findViewById(R.id.titleText)</span><br><span class="line">        <span class="keyword">val</span> descriptionText: TextView = itemView.findViewById(R.id.descriptionText)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 创建ViewHolder实例</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> parent 父容器ViewGroup</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> viewType 视图类型</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 返回创建的ItemViewHolder实例</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreateViewHolder</span><span class="params">(parent: <span class="type">ViewGroup</span>, viewType: <span class="type">Int</span>)</span></span>: ItemViewHolder &#123;</span><br><span class="line">        <span class="keyword">val</span> view = LayoutInflater.from(parent.context)</span><br><span class="line">            .inflate(R.layout.item_layout, parent, <span class="literal">false</span>)</span><br><span class="line">        <span class="keyword">return</span> ItemViewHolder(view)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 绑定数据到ViewHolder</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> holder 要绑定数据的ViewHolder</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> position 当前item在列表中的位置</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onBindViewHolder</span><span class="params">(holder: <span class="type">ItemViewHolder</span>, position: <span class="type">Int</span>)</span></span> &#123;</span><br><span class="line">        <span class="keyword">val</span> item = items[position]</span><br><span class="line">        holder.titleText.text = item.title</span><br><span class="line">        holder.descriptionText.text = item.description</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取列表项的数量</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 返回items列表的大小</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">getItemCount</span><span class="params">()</span></span> = items.size</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -110,13 +110,10 @@
 
 
 <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>遇到的问题，应该添加import的地方IDE没有完全提示（只红无线）</p>
-<img src="C:\Users\m't's\AppData\Roaming\Typora\typora-user-images\image-20251210210132596.png" alt="image-20251210210132596"  />
-
-<p>   |</p>
-<p>  ||</p>
-<p>\    &#x2F;</p>
-<p>  /</p>
-<p><img src="C:\Users\m't's\AppData\Roaming\Typora\typora-user-images\image-20251210215114433.png" alt="image-20251210215114433"></p>
+<p><img src="D:\360MoveData\Users\m't's\Desktop\根节点\my.blog\source\images\image-20251210210132596.png" alt="image-20251210210132596"></p>
+<p>|</p>
+<p>/</p>
+<p><img src="D:\360MoveData\Users\m't's\Desktop\根节点\my.blog\source\images\image-20251210215114433.png" alt="image-20251210215114433"></p>
 
       </div>
         <div class="support-author">
