@@ -59,7 +59,7 @@
       </li>
       <li>
         
-    更新 <time datetime="2025-12-23T13:02:11.277Z" itemprop="dateUpdated">2025-12-23</time>
+    更新 <time datetime="2025-12-23T13:16:21.155Z" itemprop="dateUpdated">2025-12-23</time>
 
       </li>
       <li id="busuanzi_container_page_pv">
@@ -79,10 +79,12 @@
 </li>
 <li><h3 id="适配器-ItemAdapter"><a href="#适配器-ItemAdapter" class="headerlink" title="适配器 (ItemAdapter)"></a>适配器 (ItemAdapter)</h3><p>继承自 RecyclerView.Adapter<br>包含 ItemViewHolder 内部类用于持有列表项视图<br>实现三个关键方法：<br>onCreateViewHolder: 创建列表项视图<br>onBindViewHolder: 绑定数据到视图<br>getItemCount: 返回数据项总数</p>
 <p>这种结构是 Android 开发中 RecyclerView.Adapter 的标准模板，适用于大多数简单列表展示场景。</p>
-<h3 id="标准实现模式"><a href="#标准实现模式" class="headerlink" title="标准实现模式"></a>标准实现模式</h3><p>ViewHolder 类：ItemViewHolder 内部类继承 RecyclerView.ViewHolder通过 findViewById 获取列表项中视图组件<br>三个核心方法重写：</p>
-<p>onCreateViewHolder：创建并返回 ViewHolder 实例</p>
-<p>onBindViewHolder：绑定数据到 ViewHolder<br>getItemCount：返回数据集合大小</p>
-</li>
+<h3 id="标准实现模式"><a href="#标准实现模式" class="headerlink" title="标准实现模式"></a>标准实现模式</h3></li>
+</ol>
+<p>ViewHolder 类：ItemViewHolder 内部类继承 RecyclerView.ViewHolder通过 findViewById 获取列表项中视图组件<br>三个核心方法重写：</p>
+<p>   onCreateViewHolder：创建并返回 ViewHolder 实例</p>
+<p>   onBindViewHolder：绑定数据到 ViewHolder<br>   getItemCount：返回数据集合大小</p>
+<ol start="4">
 <li><h3 id="列表项布局-item-layout-xml"><a href="#列表项布局-item-layout-xml" class="headerlink" title="列表项布局 (item_layout.xml)"></a>列表项布局 (item_layout.xml)</h3><p>使用垂直 LinearLayout 排列<br>包含两个 TextView 分别显示标题和描述<br>设置了适当的内边距和文字样式</p>
 </li>
 <li><h3 id="Activity-实现-RRecyclerView"><a href="#Activity-实现-RRecyclerView" class="headerlink" title="Activity 实现 (RRecyclerView)"></a>Activity 实现 (RRecyclerView)</h3><p>初始化 RecyclerView 并设置布局管理器<br>添加分割线装饰器改善视觉效果<br>创建数据列表并设置适配器<br>使用 setHasFixedSize(true) 优化性能<br>这五个部分协同工作，构成了完整的 RecyclerView 显示系统。</p>
