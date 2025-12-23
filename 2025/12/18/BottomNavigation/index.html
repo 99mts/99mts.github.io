@@ -59,7 +59,7 @@
       </li>
       <li>
         
-    更新 <time datetime="2025-12-22T14:24:30.902Z" itemprop="dateUpdated">2025-12-22</time>
+    更新 <time datetime="2025-12-23T13:09:13.878Z" itemprop="dateUpdated">2025-12-23</time>
 
       </li>
       <li id="busuanzi_container_page_pv">
@@ -99,7 +99,7 @@
 
 
 
-<h3 id="项目文件总览："><a href="#项目文件总览：" class="headerlink" title="项目文件总览："></a>项目文件总览：</h3><p><img src="C:\Users\m't's\AppData\Roaming\Typora\typora-user-images\image-20251222221433814.png" alt="image-20251222221433814"></p>
+<h3 id="项目文件总览："><a href="#项目文件总览：" class="headerlink" title="项目文件总览："></a>项目文件总览：</h3><p><img src="D:\360MoveData\Users\m't's\Desktop\根节点\my.blog\source\images\image-20251222221433814.png" alt="image-20251222221433814"></p>
 <h3 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h3><h3 id="初始化阶段："><a href="#初始化阶段：" class="headerlink" title="初始化阶段："></a>初始化阶段：</h3><p>Main_bnav 加载布局，初始化 NavHostFragment<br>NavController 绑定到 BottomNavigationView<br>默认加载 menu_home 对应的 HomeFragment</p>
 <h4 id="导航过程："><a href="#导航过程：" class="headerlink" title="导航过程："></a>导航过程：</h4><p>用户点击底部菜单项<br>BottomNavigationView 通过 NavController 切换对应 Fragment<br>Toolbar 标题自动更新为当前 Fragment 的 label</p>
 <p>这种设计实现了界面与导航逻辑的解耦，简化了页面跳转管理。</p>
@@ -109,26 +109,26 @@
 <p>如果你的项目是 Kotlin 为主，建议使用 navigation-fragment-ktx，因为它能显著提升开发效率和代码可读性。<br>如果你使用的是纯 Java 项目或不希望引入 KTX，可以只用 navigation-fragment。</p>
 <p>📌 注意：navigation-fragment-ktx 依赖于 navigation-fragment，因此通常不需要单独声明两者，只需添加 ktx 版本即可自动包含基础库。</p>
 <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>问题： 底部有白缝</p>
-<p><img src="C:\Users\m't's\AppData\Roaming\Typora\typora-user-images\image-20251218205348130.png" alt="image-20251218205348130"></p>
+<p><img src="D:\360MoveData\Users\m't's\Desktop\根节点\my.blog\source\images\image-20251218205348130.png" alt="image-20251218205348130"></p>
 <p>最初以为是相对布局的问题，后面改成了LinearLayout也无济于事，最后发现是这行代码的问题（并非一行代码的问题）</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">android:id=&quot;@+id/main&quot;</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\m't's\AppData\Roaming\Typora\typora-user-images\image-20251218205722321.png" alt="image-20251218205722321"></p>
+<p><img src="D:\360MoveData\Users\m't's\Desktop\根节点\my.blog\source\images\image-20251218205722321.png" alt="image-20251218205722321"></p>
 <p>0</p>
-<p><img src="C:\Users\m't's\AppData\Roaming\Typora\typora-user-images\image-20251218205840802.png" alt="image-20251218205840802"></p>
+<p><img src="D:\360MoveData\Users\m't's\Desktop\根节点\my.blog\source\images\image-20251218205840802.png" alt="image-20251218205840802"></p>
 <p>0</p>
-<p><img src="C:\Users\m't's\AppData\Roaming\Typora\typora-user-images\image-20251218205916079.png" alt="image-20251218205916079"></p>
+<p><img src="D:\360MoveData\Users\m't's\Desktop\根节点\my.blog\source\images\image-20251218205916079.png" alt="image-20251218205916079"></p>
 <p>关键信息：</p>
 <p>1.“窗口边距处理：在 BNavigation.kt 中，这个 ID 被用于设置系统窗口边距”</p>
 <p>2.这个 ID 允许应用正确处理系统 UI 元素（如状态栏和导航栏）与内容区域之间的间距。</p>
 <p>3.避免遮挡：确保内容不会被系统 UI 元素（如状态栏、导航栏）遮挡</p>
-<p><img src="C:\Users\m't's\AppData\Roaming\Typora\typora-user-images\image-20251218215509815.png" alt="image-20251218215509815"></p>
+<p><img src="D:\360MoveData\Users\m't's\Desktop\根节点\my.blog\source\images\image-20251218215509815.png" alt="image-20251218215509815"></p>
 <p>所以问题就在于android:id&#x3D;”@+id&#x2F;main” 使得这个布局容器有了一个用于唯一标识布局容器的 ID。通过这个ID ，可以让BNavigation.kt内的部分函数自动设置系统 UI 元素（导航栏）与内容区域（ BottomNavigation）之间的间距，所以就有了这个突兀的白缝（自动设置的间距）</p>
-<p><img src="C:\Users\m't's\AppData\Roaming\Typora\typora-user-images\image-20251218211338179.png" alt="image-20251218211338179"></p>
+<p><img src="D:\360MoveData\Users\m't's\Desktop\根节点\my.blog\source\images\image-20251218211338179.png" alt="image-20251218211338179"></p>
 <p>修好了</p>
 <p>并非</p>
 <p>紧跟着的问题</p>
-<p><img src="C:\Users\m't's\AppData\Roaming\Typora\typora-user-images\image-20251218214104949.png" alt="image-20251218214104949"></p>
+<p><img src="D:\360MoveData\Users\m't's\Desktop\根节点\my.blog\source\images\image-20251218214104949.png" alt="image-20251218214104949"></p>
 <p>因为取消了自动设置的间距，导致内容与通知栏重叠了，因为这个间距也被取消了（未解决）</p>
 <p>（所以需要更好的方法）</p>
 <p>（在用模板完成后想到的方法，如果在上面放置一个bar可能能解决，但是大概率是通知栏被bar遮挡？没试）</p>
@@ -141,9 +141,9 @@
 
 <p>重新写了，用模板方法（Google 官方推荐的 Navigation Architecture Component）</p>
 <p>改模板就好了</p>
-<p><img src="C:\Users\m't's\AppData\Roaming\Typora\typora-user-images\image-20251222214000658.png" alt="image-20251222214000658"></p>
-<h3 id="另外一个令人发狂的问题，如果你看见新文件和老文件里面的代码全部都大片爆红，并且大部分都是IDE提示说gradle引用问题，并且ai一直告诉你要在gradle里添加新的implementation，那就是这个问题（IDE犯病了）"><a href="#另外一个令人发狂的问题，如果你看见新文件和老文件里面的代码全部都大片爆红，并且大部分都是IDE提示说gradle引用问题，并且ai一直告诉你要在gradle里添加新的implementation，那就是这个问题（IDE犯病了）" class="headerlink" title="另外一个令人发狂的问题，如果你看见新文件和老文件里面的代码全部都大片爆红，并且大部分都是IDE提示说gradle引用问题，并且ai一直告诉你要在gradle里添加新的implementation，那就是这个问题（IDE犯病了）"></a>另外一个令人发狂的问题，如果你看见新文件和老文件里面的代码全部都大片爆红，并且大部分都是IDE提示说gradle引用问题，并且ai一直告诉你要在gradle里添加新的implementation，那就是这个问题（IDE犯病了）</h3><p><img src="C:\Users\m't's\AppData\Roaming\Typora\typora-user-images\image-20251221221901219.png" alt="image-20251221221901219"></p>
-<p><img src="C:\Users\m't's\AppData\Roaming\Typora\typora-user-images\image-20251221222317208.png" alt="image-20251221222317208"></p>
+<p><img src="D:\360MoveData\Users\m't's\Desktop\根节点\my.blog\source\images\image-20251222214000658.png" alt="image-20251222214000658"></p>
+<h3 id="另外一个令人发狂的问题，如果你看见新文件和老文件里面的代码全部都大片爆红，并且大部分都是IDE提示说gradle引用问题，并且ai一直告诉你要在gradle里添加新的implementation，那就是这个问题（IDE犯病了）"><a href="#另外一个令人发狂的问题，如果你看见新文件和老文件里面的代码全部都大片爆红，并且大部分都是IDE提示说gradle引用问题，并且ai一直告诉你要在gradle里添加新的implementation，那就是这个问题（IDE犯病了）" class="headerlink" title="另外一个令人发狂的问题，如果你看见新文件和老文件里面的代码全部都大片爆红，并且大部分都是IDE提示说gradle引用问题，并且ai一直告诉你要在gradle里添加新的implementation，那就是这个问题（IDE犯病了）"></a>另外一个令人发狂的问题，如果你看见新文件和老文件里面的代码全部都大片爆红，并且大部分都是IDE提示说gradle引用问题，并且ai一直告诉你要在gradle里添加新的implementation，那就是这个问题（IDE犯病了）</h3><p><img src="D:\360MoveData\Users\m't's\Desktop\根节点\my.blog\source\images\image-20251221221901219.png" alt="image-20251221221901219"></p>
+<p><img src="D:\360MoveData\Users\m't's\Desktop\根节点\my.blog\source\images\image-20251221222317208.png" alt="image-20251221222317208"></p>
 <h2 id="不用勾选，直接Invalidate-and-Restart-就解决了！"><a href="#不用勾选，直接Invalidate-and-Restart-就解决了！" class="headerlink" title="不用勾选，直接Invalidate and Restart 就解决了！"></a>不用勾选，直接Invalidate and Restart 就解决了！</h2>
       </div>
         <div class="support-author">
