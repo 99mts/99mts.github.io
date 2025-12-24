@@ -59,7 +59,7 @@
       </li>
       <li>
         
-    更新 <time datetime="2025-12-23T13:03:48.192Z" itemprop="dateUpdated">2025-12-23</time>
+    更新 <time datetime="2025-12-24T12:37:00.115Z" itemprop="dateUpdated">2025-12-24</time>
 
       </li>
       <li id="busuanzi_container_page_pv">
@@ -75,6 +75,12 @@
 <p>中转站</p>
 <p>0</p>
 <p>0</p>
+<h2 id="使用第三方库时的问题"><a href="#使用第三方库时的问题" class="headerlink" title="使用第三方库时的问题"></a>使用第三方库时的问题</h2><p>Maven 仓库配置说明</p>
+<p>配置语法解释<br>在 settings.gradle.kts 文件中配置 Maven 仓库时，需要使用正确的语法：<br>正确的配置方式</p>
+<p>maven { url &#x3D; uri(“<a target="_blank" rel="noopener" href="https://www.jitpack.io/">https://www.jitpack.io</a>“) }</p>
+<h4 id="语法要点"><a href="#语法要点" class="headerlink" title="语法要点"></a>语法要点</h4><p>maven {}: 这是一个函数调用，接受一个 lambda 表达式<br>url &#x3D; uri(): 使用 uri() 函数包装 URL 字符串，而不是直接使用字符串<br>uri(): Gradle 提供的函数，用于创建 URI 对象</p>
+<h4 id="配置说明"><a href="#配置说明" class="headerlink" title="配置说明"></a>配置说明</h4><p>JitPack 仓库: <a target="_blank" rel="noopener" href="https://www.jitpack.io/">https://www.jitpack.io</a> 是一个常用的第三方库仓库<br>用途: 用于获取通过 GitHub 等平台发布的开源库<br>语法要求: 必须使用 uri() 函数包装 URL 字符串</p>
+<p><img src="C:\Users\m't's\AppData\Roaming\Typora\typora-user-images\image-20251224203302188.png" alt="image-20251224203302188"></p>
 
       </div>
         <div class="support-author">
