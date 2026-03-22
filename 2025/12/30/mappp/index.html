@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="keywords" content="hexo,个人博客,blog" />
+  <meta name="description" content="99mts的个人博客" />
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+  
+  <link rel="dns-prefetch" href="https://widget.daovoice.io">
+  <link rel="dns-prefetch" href="https://widget-static-cdn.daovoice.io">
+  <link rel="dns-prefetch" href="https://im.daovoice.io">
+  
+  
+  <link rel="dns-prefetch" href="https://hm.baidu.com/">
+  
+  
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://api.github.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  
+  <link rel="stylesheet" type="text/css" href="/./style/main.d9e3dd.css">
+	<link rel="shortcut icon" href="/favicon.ico" title="Favicon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<title>mappp</title>
+  
+  <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?awwssw1snsnsnn1ndndnndnd99j";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();
+  </script>
+  
+  
+    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/123456.js","daovoice");daovoice('init',{app_id: "123456"});daovoice('update');
+  </script>
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+<canvas id="pattern-placeholder" height="230"></canvas>
+<div class="navbar-header">
+  <a class="blog-title" href="/">MTS的blog</a>
+  <a class="face-img" href="/">
+    <img src="https://ods2.oddba.cn/user_files/74063/publish/post/95278945_1673715466.jpeg">
+  </a>
+</div>
+<main>
+  <div class="article-title">
+    
+  
+  <h1 class="title">
+    mappp
+  </h1>
+  
+
+
+    <ul class="article-info">
+      <li>
+        发布
+        <time datetime="2025-12-30T11:17:47.000Z" itemprop="datePublished">2025-12-30</time>
+      </li>
+      <li>
+        
+    更新 <time datetime="2025-12-30T11:48:27.382Z" itemprop="dateUpdated">2025-12-30</time>
+
+      </li>
+      <li id="busuanzi_container_page_pv">
+        阅读 <span id="busuanzi_value_page_pv"></span>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="article">
+      <div class="content">
+        
+        <p>0</p>
+<h1 id="map的简单使用"><a href="#map的简单使用" class="headerlink" title="map的简单使用"></a>map的简单使用</h1><h3 id="用到的库"><a href="#用到的库" class="headerlink" title="用到的库"></a>用到的库</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">implementation(<span class="string">&quot;com.github.chrisbanes:photoview:2.3.0&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>（自带双击放大，拖动放大）</p>
+<h5 id="通过简单的activity-view实现可以点击放大的地图"><a href="#通过简单的activity-view实现可以点击放大的地图" class="headerlink" title="通过简单的activity+view实现可以点击放大的地图"></a>通过简单的activity+view实现可以点击放大的地图</h5><h3 id="GameMapActivity代码-注释"><a href="#GameMapActivity代码-注释" class="headerlink" title="GameMapActivity代码+注释"></a>GameMapActivity代码+注释</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.newlearn.map  <span class="comment">// 定义包名，用于地图相关功能</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.graphics.Matrix      <span class="comment">// 导入矩阵类，用于坐标变换</span></span><br><span class="line"><span class="keyword">import</span> android.os.Bundle           <span class="comment">// 导入Bundle类，用于Activity状态保存</span></span><br><span class="line"><span class="keyword">import</span> android.view.GestureDetector <span class="comment">// 导入手势检测器类</span></span><br><span class="line"><span class="keyword">import</span> android.view.MotionEvent    <span class="comment">// 导入触摸事件类</span></span><br><span class="line"><span class="keyword">import</span> android.widget.Toast        <span class="comment">// 导入Toast类，用于显示提示信息</span></span><br><span class="line"><span class="keyword">import</span> androidx.appcompat.app.AppCompatActivity <span class="comment">// 导入AppCompatActivity基类</span></span><br><span class="line"><span class="keyword">import</span> com.example.newlearn.R                    <span class="comment">// 导入资源文件</span></span><br><span class="line"><span class="keyword">import</span> com.github.chrisbanes.photoview.PhotoView <span class="comment">// 导入PhotoView库</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">GameMapActivity</span> : <span class="type">AppCompatActivity</span>() &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">lateinit</span> <span class="keyword">var</span> photoView: PhotoView <span class="comment">// 声明PhotoView实例，用于显示地图</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">val</span> matrix = Matrix()                <span class="comment">// 声明矩阵实例，用于坐标变换计算</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">lateinit</span> <span class="keyword">var</span> gestureDetector: GestureDetector <span class="comment">// 声明手势检测器实例</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreate</span><span class="params">(savedInstanceState: <span class="type">Bundle</span>?)</span></span> &#123;  <span class="comment">// 重写onCreate方法，Activity创建时调用</span></span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState)               <span class="comment">// 调用父类onCreate方法</span></span><br><span class="line">        setContentView(R.layout.activity_game_map)     <span class="comment">// 设置布局文件</span></span><br><span class="line"></span><br><span class="line">        photoView = findViewById(R.id.game_map_view)   <span class="comment">// 通过ID查找PhotoView组件</span></span><br><span class="line"></span><br><span class="line">        photoView.setMaximumScale(<span class="number">5.0f</span>)  <span class="comment">// 设置最大缩放倍数为5倍</span></span><br><span class="line">        photoView.setMediumScale(<span class="number">2.5f</span>)   <span class="comment">// 设置中等缩放倍数为2.5倍（双击目标缩放）</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置地图图片</span></span><br><span class="line">        photoView.setImageResource(R.drawable.map1) <span class="comment">// 设置地图图片资源</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建手势检测器</span></span><br><span class="line">        gestureDetector = GestureDetector(<span class="keyword">this</span>, <span class="keyword">object</span> : GestureDetector.SimpleOnGestureListener() &#123;</span><br><span class="line">            <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onSingleTapConfirmed</span><span class="params">(e: <span class="type">MotionEvent</span>)</span></span>: <span class="built_in">Boolean</span>&#123;<span class="comment">// 处理确认的单击事件</span></span><br><span class="line">                handleMapClick(photoView, e)                          <span class="comment">// 调用地图点击处理方法</span></span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onDoubleTap</span><span class="params">(e: <span class="type">MotionEvent</span>)</span></span>: <span class="built_in">Boolean</span> &#123;        <span class="comment">// 处理双击事件</span></span><br><span class="line">                <span class="comment">// 双击事件</span></span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="comment">// 设置缩放监听器</span></span><br><span class="line">        photoView.setOnMatrixChangeListener &#123; rectF -&gt;</span><br><span class="line">            <span class="comment">// 处理缩放变化 - 当前未实现具体逻辑</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置单击监听器</span></span><br><span class="line">        photoView.setOnViewTapListener &#123; view, x, y -&gt;    <span class="comment">// 设置视图点击监听器</span></span><br><span class="line">            <span class="comment">// 创建一个简单的MotionEvent来模拟点击位置</span></span><br><span class="line">            <span class="keyword">val</span> mockEvent = MotionEvent.obtain(            <span class="comment">// 获取MotionEvent实例</span></span><br><span class="line">                System.currentTimeMillis(),                <span class="comment">// 设置事件开始时间</span></span><br><span class="line">                System.currentTimeMillis(),                <span class="comment">// 设置事件发生时间</span></span><br><span class="line">                MotionEvent.ACTION_UP,                     <span class="comment">// 设置动作为抬起</span></span><br><span class="line">                x,                                         <span class="comment">// 设置X坐标</span></span><br><span class="line">                y,                                         <span class="comment">// 设置Y坐标</span></span><br><span class="line">                <span class="number">0</span>                                 <span class="comment">// 设置设备ID</span></span><br><span class="line">            )</span><br><span class="line">            handleMapClick(photoView, mockEvent)          <span class="comment">// 调用地图点击处理方法</span></span><br><span class="line">            mockEvent.recycle()                           <span class="comment">// 回收MotionEvent对象</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">handleMapClick</span><span class="params">(photoView: <span class="type">PhotoView</span>, event: <span class="type">MotionEvent</span>)</span></span>&#123;<span class="comment">// 处理地图点击方法</span></span><br><span class="line">        <span class="comment">// 获取当前变换矩阵</span></span><br><span class="line">        <span class="keyword">val</span> currentMatrix = FloatArray(<span class="number">9</span>)                            <span class="comment">// 创建长度为9的浮点数组</span></span><br><span class="line">        photoView.getSuppMatrix(matrix)                             <span class="comment">// 获取当前支持的变换矩阵</span></span><br><span class="line">        matrix.getValues(currentMatrix)                                <span class="comment">// 将矩阵值复制到数组</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 计算实际地图坐标</span></span><br><span class="line">        <span class="keyword">val</span> x = event.x                                                 <span class="comment">// 获取触摸事件X坐标</span></span><br><span class="line">        <span class="keyword">val</span> y = event.y                                                 <span class="comment">// 获取触摸事件Y坐标</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 考虑缩放和平移的坐标转换</span></span><br><span class="line">        <span class="keyword">val</span> scale = currentMatrix[Matrix.MSCALE_X]                         <span class="comment">// 获取X轴缩放值</span></span><br><span class="line">        <span class="keyword">val</span> transX = currentMatrix[Matrix.MTRANS_X]                        <span class="comment">// 获取X轴平移值</span></span><br><span class="line">        <span class="keyword">val</span> transY = currentMatrix[Matrix.MTRANS_Y]                        <span class="comment">// 获取Y轴平移值</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">val</span> actualX = (x - transX) / scale                                 <span class="comment">// 计算实际X坐标</span></span><br><span class="line">        <span class="keyword">val</span> actualY = (y - transY) / scale                                 <span class="comment">// 计算实际Y坐标</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 处理点击位置的逻辑</span></span><br><span class="line">        processMapClick(actualX, actualY)                                <span class="comment">// 调用位置处理方法</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">processMapClick</span><span class="params">(x: <span class="type">Float</span>, y: <span class="type">Float</span>)</span></span> &#123;                 <span class="comment">// 处理点击位置逻辑方法</span></span><br><span class="line">        <span class="comment">// 在这里实现点击地图后的逻辑</span></span><br><span class="line">        <span class="comment">// 例如：显示点击位置信息、触发游戏事件等</span></span><br><span class="line">        Toast.makeText(<span class="keyword">this</span>, <span class="string">&quot;点击位置: X=<span class="variable">$x</span>, Y=<span class="variable">$y</span>&quot;</span>, Toast.LENGTH_SHORT).show() <span class="comment">// 显示点击位置的Toast提示</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="activity-game-map-xml代码"><a href="#activity-game-map-xml代码" class="headerlink" title="activity_game_map.xml代码"></a>activity_game_map.xml代码</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">FrameLayout</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;match_parent&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">com.github.chrisbanes.photoview.PhotoView</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/game_map_view&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:scaleType</span>=<span class="string">&quot;fitCenter&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">FrameLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+      </div>
+        <div class="support-author">
+          <p>感谢您的阅读。 🙏
+          <a href="https://888.com/index.html" target="_blank">关于转载请看这里</a>
+            <!--<a class="btn-pay"  href="#pay-modal">¥ 打赏支持</a>-->
+          </p>
+        </div>
+        <!--
+            <div class="like ">
+              <div class="like-button">
+                <a id="like-note" href="">
+                  <i class="icon-heart"></i>喜欢
+                </a>
+              </div>
+              <span id="likes-count">256</span>
+            </div>
+        -->
+        <div class="otherLink">
+          <div class="previous">
+          </div>
+          <div class="next">
+          </div>
+        </div>
+        <div class="comments" id="comments">
+          
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  const gitalk = new Gitalk({
+    clientID: '8888a8888',
+    clientSecret: '8888886666666',
+    repo: 'xxxx.github.io',
+    owner: 'admin',
+    admin: ['admin'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false
+  })
+
+  gitalk.render('comments');
+</script>
+
+
+        </div>
+      </div>
+    </div>
+   </div>
+</main>
+<div class="footer">
+  <div class="info">
+    <p>
+    <a target="_blank" rel="noopener" href="https://hexo.io"> Hexo </a> 强力驱动 |
+      <a target="_blank" rel="noopener" href="https://github.com/Youthink/hexo-themes-yearn"> Yearn </a>
+      主题
+    </p>
+    <p>&copy;2024-2077 99mts的博客</p>
+  </div>
+</div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script>//console
+  var consoleConfig = '\n欢迎访问 https://hufangyun.com ，围观小猿大圣的博客(づ｡◕‿‿◕｡)づ！\n,\n本博客使用 %cHexo%c 搭建，博客主题为小猿大圣开发的 %chexo-themes-yearn%c ~~~ 🎉🎉🎉 \n\n源码 https://github.com/Youthink/hexo-themes-yearn \n\n如果喜欢可以 star 支持一下 ❤️~\n,\n扫描下面的二维码，在手机上查看博客！\n,https://static.hufangyun.com/blog-url-qrcode-180-180.png,\n 想知道这个效果如何实现的？博客内搜索 console 彩蛋 🚀 ！\n'.split(',');
+  var canConsole = true;
+  var consoleInfo = (function(consoleConfig) {
+  if (!canConsole || !consoleConfig || consoleConfig.length < 1) {
+    return;
+  }
+  var consoleColor = '#6190e8';
+  var _console;
+  var backgroundTextStyle = 'padding: 1px 5px;color: #fff;background: ' + consoleColor + ';'
+  var textStyle = 'color: ' + consoleColor + ';';
+
+  consoleConfig.map(o => {
+    var num = (o.match(/%c/g) || []).length;
+    if(/^http(s)?:\/\//.test(o)) {
+      console.log('%c     ', 'background: url(' + o + ') no-repeat left center;font-size: 180px;');
+      return;
+    }
+    if (num > 0) {
+      var logArguments = [];
+      for (var i = 0; i < num; i++) {
+        if (i % 2 === 0) {
+          logArguments.push(backgroundTextStyle);
+        } else {
+          logArguments.push(textStyle);
+        }
+      }
+      (_console = console).log.apply(_console, ['%c' + o, textStyle].concat(logArguments));
+      return;
+    }
+    console.log('%c' + o, textStyle);
+  });
+}(consoleConfig));</script><script type="text/javascript" src="/./js/main.d9e3dd.js"></script>
+
+</body>
+</html>

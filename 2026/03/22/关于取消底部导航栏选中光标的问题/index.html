@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="keywords" content="hexo,个人博客,blog" />
+  <meta name="description" content="99mts的个人博客" />
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+  
+  <link rel="dns-prefetch" href="https://widget.daovoice.io">
+  <link rel="dns-prefetch" href="https://widget-static-cdn.daovoice.io">
+  <link rel="dns-prefetch" href="https://im.daovoice.io">
+  
+  
+  <link rel="dns-prefetch" href="https://hm.baidu.com/">
+  
+  
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://api.github.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  
+  <link rel="stylesheet" type="text/css" href="/./style/main.d9e3dd.css">
+	<link rel="shortcut icon" href="/favicon.ico" title="Favicon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<title>关于取消底部导航栏选中光标的问题</title>
+  
+  <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?awwssw1snsnsnn1ndndnndnd99j";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();
+  </script>
+  
+  
+    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/123456.js","daovoice");daovoice('init',{app_id: "123456"});daovoice('update');
+  </script>
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+<canvas id="pattern-placeholder" height="230"></canvas>
+<div class="navbar-header">
+  <a class="blog-title" href="/">MTS的blog</a>
+  <a class="face-img" href="/">
+    <img src="https://ods2.oddba.cn/user_files/74063/publish/post/95278945_1673715466.jpeg">
+  </a>
+</div>
+<main>
+  <div class="article-title">
+    
+  
+  <h1 class="title">
+    关于取消底部导航栏选中光标的问题
+  </h1>
+  
+
+
+    <ul class="article-info">
+      <li>
+        发布
+        <time datetime="2026-03-22T13:27:39.000Z" itemprop="datePublished">2026-03-22</time>
+      </li>
+      <li>
+        
+    更新 <time datetime="2026-03-22T13:32:53.219Z" itemprop="dateUpdated">2026-03-22</time>
+
+      </li>
+      <li id="busuanzi_container_page_pv">
+        阅读 <span id="busuanzi_value_page_pv"></span>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="article">
+      <div class="content">
+        
+        <p>.</p>
+<p>原来的代码（有光标）</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">com.google.android.material.bottomnavigation.BottomNavigationView</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">&quot;@+id/nav_view&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;120dp&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:background</span>=<span class="string">&quot;@color/black&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:itemTextAppearanceActive</span>=<span class="string">&quot;@style/TextAppearance.AppCompat.Widget.Button.Colored&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:labelVisibilityMode</span>=<span class="string">&quot;auto&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:itemRippleColor</span>=<span class="string">&quot;@android:color/transparent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:itemIconSize</span>=<span class="string">&quot;80dp&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:itemIconTint</span>=<span class="string">&quot;#ECEBB8&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:itemTextColor</span>=<span class="string">&quot;#ECEBB8&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:menu</span>=<span class="string">&quot;@menu/bottom_navigation_menu&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\m't's\AppData\Roaming\Typora\typora-user-images\image-20260309201020149.png" alt="image-20260309201020149"></p>
+<p>改后（无光标）</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">com.google.android.material.bottomnavigation.BottomNavigationView</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">&quot;@+id/nav_view&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;120dp&quot;</span>   <span class="attr">style</span>=<span class="string">&quot;@style/CompactBottomNavigation&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:background</span>=<span class="string">&quot;@color/black&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:itemTextAppearanceActive</span>=<span class="string">&quot;@style/TextAppearance.AppCompat.Widget.Button.Colored&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:labelVisibilityMode</span>=<span class="string">&quot;auto&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:itemRippleColor</span>=<span class="string">&quot;@android:color/transparent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:itemIconSize</span>=<span class="string">&quot;80dp&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:itemIconTint</span>=<span class="string">&quot;#ECEBB8&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:itemTextColor</span>=<span class="string">&quot;#ECEBB8&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:menu</span>=<span class="string">&quot;@menu/bottom_navigation_menu&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\m't's\AppData\Roaming\Typora\typora-user-images\image-20260309201102586.png" alt="image-20260309201102586"></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">resources</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">name</span>=<span class="string">&quot;CompactBottomNavigation&quot;</span> 	         <span class="attr">parent</span>=<span class="string">&quot;Widget.MaterialComponents.BottomNavigationView&quot;</span>&gt;</span><span class="language-xml">  <span class="tag">&lt;<span class="name">item</span> <span class="attr">name</span>=<span class="string">&quot;android:layout_marginTop&quot;</span>&gt;</span>-10dp<span class="tag">&lt;/<span class="name">item</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">item</span> <span class="attr">name</span>=<span class="string">&quot;android:layout_marginBottom&quot;</span>&gt;</span>-20dp<span class="tag">&lt;/<span class="name">item</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\m't's\AppData\Roaming\Typora\typora-user-images\image-20260309201140615.png" alt="image-20260309201140615"></p>
+<p>没有选中光标了！</p>
+<p>，</p>
+<p>可能是因为绘制原因，光标飞了</p>
+<p><img src="C:\Users\m't's\AppData\Roaming\Typora\typora-user-images\image-20260309220925599.png" alt="image-20260309220925599"></p>
+<p>很可能不是绘制问题，把app:itemRippleColor&#x3D;”@android:color&#x2F;white”从透明改成白色后能看见有点击效果，但是没光标啊？不对不对，这个是涟漪效果，不是选中光标。</p>
+<p>但是我把dp从150拉到550也没看见选中光标，除非他飞到左右去了，不然肯定不是绘制飞了的问题，肯定就是因为什么取消了！</p>
+<p>可能是因为换了样式，然后没有定义选中光标，就默认没了</p>
+
+      </div>
+        <div class="support-author">
+          <p>感谢您的阅读。 🙏
+          <a href="https://888.com/index.html" target="_blank">关于转载请看这里</a>
+            <!--<a class="btn-pay"  href="#pay-modal">¥ 打赏支持</a>-->
+          </p>
+        </div>
+        <!--
+            <div class="like ">
+              <div class="like-button">
+                <a id="like-note" href="">
+                  <i class="icon-heart"></i>喜欢
+                </a>
+              </div>
+              <span id="likes-count">256</span>
+            </div>
+        -->
+        <div class="otherLink">
+          <div class="previous">
+          </div>
+          <div class="next">
+          </div>
+        </div>
+        <div class="comments" id="comments">
+          
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  const gitalk = new Gitalk({
+    clientID: '8888a8888',
+    clientSecret: '8888886666666',
+    repo: 'xxxx.github.io',
+    owner: 'admin',
+    admin: ['admin'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false
+  })
+
+  gitalk.render('comments');
+</script>
+
+
+        </div>
+      </div>
+    </div>
+   </div>
+</main>
+<div class="footer">
+  <div class="info">
+    <p>
+    <a target="_blank" rel="noopener" href="https://hexo.io"> Hexo </a> 强力驱动 |
+      <a target="_blank" rel="noopener" href="https://github.com/Youthink/hexo-themes-yearn"> Yearn </a>
+      主题
+    </p>
+    <p>&copy;2024-2077 99mts的博客</p>
+  </div>
+</div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script>//console
+  var consoleConfig = '\n欢迎访问 https://hufangyun.com ，围观小猿大圣的博客(づ｡◕‿‿◕｡)づ！\n,\n本博客使用 %cHexo%c 搭建，博客主题为小猿大圣开发的 %chexo-themes-yearn%c ~~~ 🎉🎉🎉 \n\n源码 https://github.com/Youthink/hexo-themes-yearn \n\n如果喜欢可以 star 支持一下 ❤️~\n,\n扫描下面的二维码，在手机上查看博客！\n,https://static.hufangyun.com/blog-url-qrcode-180-180.png,\n 想知道这个效果如何实现的？博客内搜索 console 彩蛋 🚀 ！\n'.split(',');
+  var canConsole = true;
+  var consoleInfo = (function(consoleConfig) {
+  if (!canConsole || !consoleConfig || consoleConfig.length < 1) {
+    return;
+  }
+  var consoleColor = '#6190e8';
+  var _console;
+  var backgroundTextStyle = 'padding: 1px 5px;color: #fff;background: ' + consoleColor + ';'
+  var textStyle = 'color: ' + consoleColor + ';';
+
+  consoleConfig.map(o => {
+    var num = (o.match(/%c/g) || []).length;
+    if(/^http(s)?:\/\//.test(o)) {
+      console.log('%c     ', 'background: url(' + o + ') no-repeat left center;font-size: 180px;');
+      return;
+    }
+    if (num > 0) {
+      var logArguments = [];
+      for (var i = 0; i < num; i++) {
+        if (i % 2 === 0) {
+          logArguments.push(backgroundTextStyle);
+        } else {
+          logArguments.push(textStyle);
+        }
+      }
+      (_console = console).log.apply(_console, ['%c' + o, textStyle].concat(logArguments));
+      return;
+    }
+    console.log('%c' + o, textStyle);
+  });
+}(consoleConfig));</script><script type="text/javascript" src="/./js/main.d9e3dd.js"></script>
+
+</body>
+</html>
